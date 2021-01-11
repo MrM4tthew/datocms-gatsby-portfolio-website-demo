@@ -1,0 +1,11 @@
+.belanjaContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2vw;
+}
+
+.promoimg{background-image: url('../../public/image/pelayananmebo1.png'); background-size: cover; padding: 5%; display: flex; justify-content: center;}
+
+.promoimg > img{
+    width: 10rem;
+}

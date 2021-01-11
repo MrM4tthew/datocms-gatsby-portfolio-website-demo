@@ -1,0 +1,84 @@
+.Header{
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+    flex-direction: column;
+    font-size: 1rem;
+    .diskon{
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+        padding: 1rem 5rem;
+        background-color: #e6e6e6;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 5rem;
+        background-color: white;
+        .linkimg{
+            margin-right: 2%;
+            img{
+                width: 8rem;
+            }
+        }
+        ul{
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            font-size: 0.9rem;
+            width: 60%;
+            .link{
+                text-decoration: none;
+                color: black;
+                margin-right: 5%;
+                transition: 500ms;
+                li{
+                    width: 100%;
+                }
+            }
+            .link:hover{
+                color: lightgray;
+            }
+        }
+        .rightside{
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            .snipcart-checkout{
+                border: none;
+                background-color: transparent;
+                font-size: 1.6rem;
+                display: flex;
+                align-items: center;
+                outline: none;
+                cursor: pointer;
+                svg{
+                    color: black;
+                    transition: 150ms;
+                }
+                svg:hover{
+                    color: lightgray;
+                }
+            }
+            form{
+                display: flex;
+                flex-direction: row;
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1120px) {
+    .Header{
+        display: none;
+    }
+}

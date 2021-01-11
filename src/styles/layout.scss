@@ -1,0 +1,56 @@
+
+
+.contact__container{
+    position: fixed;
+    bottom: 5rem;
+    right: 4rem;
+    display: flex;
+    flex-direction: row;
+    transition: 1s;
+    .wa__text{
+        padding: 0.3rem;
+        padding-top: 1rem;
+        background-color: transparent;
+        color: black;
+        display: none;
+        margin-right: 1rem;
+    }
+    a{
+        padding: 0.8rem;
+        padding-left: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 10rem;
+        background-color: black;
+        .waContainer{
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                font-size: 2rem;
+                color: white;
+            }
+        }
+    }
+
+    // .waContainer:hover + .wa__text{
+    //     display: block;
+    // }
+}
+
+.contact__container:hover .wa__text{
+    display: block;
+    transition: 300ms;
+}
+
+@media only screen and (max-width: 1120px) {
+    .contact__container{
+        right: 1rem;
+        bottom: 5rem;
+    }
+}
+
+

@@ -1,0 +1,359 @@
+.imgcontainer{
+    background-image: url('../../public/image/topimage.png');
+    width: 100%;
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imgcontainer > .imgContent {
+    padding: 2rem 5rem;
+    color: var(--primary-color);
+}
+
+.imgcontainer > .imgContent > h2 {
+    font-size: 4rem;
+}
+
+.imgcontainer > .imgContent > p {
+    margin: 1rem 0rem;
+}
+
+.imgcontainer > .imgContent > a {
+    height: 1.2rem;
+    padding: 0.2rem 0.2rem;
+    width: 3rem;
+    border: 0.1rem solid white;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+.imgcontainer > .imgContent > a:hover {
+    background-color: white;
+    color: var(--complement-color);
+}
+
+.imgcontainer > h2{
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+/* Content  */
+
+.homeContent {
+    padding: 1rem 5rem;
+    
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+// .mainTitle {
+//     display: grid;
+//     place-items: center;
+//     font-size: 1.3rem;
+//     font-weight: 600;
+//     margin: 2rem 0rem;
+// }
+
+// Product carousel
+.item__carousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .mainTitle{
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .carousel__container{
+        width: 100%;
+        list-style: none;
+        .sliderContainer{
+            display: grid;
+            grid-template-columns: 4% 92% 4%;
+            .Button{
+                background-color: transparent;
+                border: none;
+                height: 20%;
+                margin: auto 0rem;
+                img{
+                    width: 3vw;
+                }
+            }
+        }
+    }  
+}
+
+// Keuntungnan
+
+.keuntunganContainer{
+    display: flex;
+    flex-direction: column;
+    .mainTitle{
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    margin-bottom: 3rem;
+}
+
+/* Artikel section */
+.artikelContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    .mainTitle{
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .listArtikel{
+        .atas{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1%;
+            .artikel{
+                .link{
+                    text-decoration: none;
+                    color: black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                }
+                img{
+                    width: 100%;
+                }
+                .first{
+                    font-size: 0.7rem;
+                }
+                .second{
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                }
+            }
+            margin-bottom: 1rem;
+        }
+        .bawah{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 1%;
+            .artikel{
+                .link{
+                    text-decoration: none;
+                    color: black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                }
+                img{
+                    width: 100%;
+                }
+                .first{
+                    font-size: 0.7rem;
+                }
+                .second{
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+/* Pelayanan section */
+
+.pelayananContainer{
+    display: flex;
+    flex-direction: column;
+    .mainTitle{
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    margin-bottom: 3rem;
+}
+
+.pelayananContainer > .listPelayanan > .pelayanan{
+    margin-bottom: 1.5rem;
+}
+.pelayananContainer > .listPelayanan > .p1 > img{
+    width: 100%;
+}
+
+.pelayananContainer > .listPelayanan > .p2 > img{
+    width: 100%;
+}
+.kategoriContainer > .listKategori{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    column-gap: 1vw;
+}
+
+// Promo
+
+.promoContainer{
+    display: flex;
+    flex-direction: column;
+    .mainTitle{
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    margin-bottom: 3rem;
+}
+
+.shopContainer{
+    .mainTitle{
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    display: flex;
+    flex-direction: column;
+}
+
+// kategori
+.kategoriContainer{
+    .mainTitle{
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .listKategori{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 3%;
+        .kategori__card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                color: black;
+                img{
+                    width: 100%;
+                }
+                span{
+                    padding: 0.5rem 0rem;
+                }
+            }
+        }
+    }
+}
+
+/* Slider */
+
+.slideContainer{
+    margin: 0rem 1rem;
+}
+
+.carousel__container.mobile{
+    display: none;
+}
+
+.mobile{
+    display: none;
+}
+
+.mobiled{
+    display: none;
+}
+
+.mobileImg{
+    display: none;
+}
+
+.carousel__container.mobilesmall{
+    display: none;
+}
+
+@media only screen and (max-width: 1120px) {
+    .homeContent{
+        padding: 1rem 1rem;
+    }
+    .imgcontainer > .imgContent {
+        padding: 1rem 1rem;
+    }
+    .imgcontainer{
+        margin-top: 6rem;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 975px) {
+    // .mobile{
+    //     display: block;
+    // }
+    
+    // .mobiled{
+    //     display: block;
+    // }
+    
+    .mobileImg{
+        display: block;
+        width: 100%;
+    }
+    
+    .desktopImg{
+        display: none;
+    }
+}
+.sliderContainer.mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 810px) {
+    .carousel__container.mobile{
+        display: block;
+    }
+    .carousel__container.desktop{
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    /* Artikel section */
+    .artikelContainer{
+        .listArtikel{
+            .atas{
+                grid-template-columns: 1fr;
+                column-gap: 1%;
+            }
+            .bawah{
+                grid-template-columns: 1fr;
+                column-gap: 1%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel__container.mobilesmall{
+        display: block;
+    }
+    .carousel__container.mobile{
+        display: none;
+    }
+}

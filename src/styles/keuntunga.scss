@@ -1,0 +1,49 @@
+.kContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+}
+
+.contain{
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 2rem;
+}
+
+.contain > .title{
+    font-weight: 600;
+}
+
+.contain > .spacing{
+    height: 10rem;
+    width: 100%;
+}
+
+.contain > .content{
+    font-size: 0.9rem;
+}
+
+.contain.c1{background-image: url('../../public/image/keuntunganmebo1.png');}
+.contain.c2{background-image: url('../../public/image/keuntunganmebo2.png');}
+.contain.c3{background-image: url('../../public/image/keuntunganmebo3.png');}
+.contain.c4{background-image: url('../../public/image/keuntunganmebo4.png');}
+
+@media only screen and (max-width: 1120px) {
+    .kContainer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .keuntunganContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+}

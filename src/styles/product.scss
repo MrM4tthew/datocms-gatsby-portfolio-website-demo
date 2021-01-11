@@ -1,0 +1,34 @@
+.product__Container > .link{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.img__container{
+    width: 100%;
+}
+
+.img__container > .image{
+    width: 100%;
+    object-fit: contain;
+    transition: 300ms;
+}
+
+.img__container > .image:hover{
+    opacity: 0.5;
+}
+
+.product__Container > .link{
+    text-decoration: none;
+    color: black;
+}
+
+.product__Container > .link > .title{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.product__Container > .link > div > p{
+    font-size: 0.9rem;
+}

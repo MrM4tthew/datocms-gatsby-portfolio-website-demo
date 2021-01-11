@@ -1,31 +1,67 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const Promise = require('bluebird')
+const path = require('path')
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = ({boundActionCreators, graphql}) => {
+    const { createPage } = boundActionCreators
 
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allDatoCmsWork {
-          edges {
-            node {
-              slug
+    const detailTemplate = path.resolve('src/templates/product-detail.js');
+    const productsTemplate = path.resolve('src/templates/products-option.js')
+
+    const firstpromise = graphql(`{
+        allDatoCmsProduct {
+            edges {
+              node {
+                id
+                genre {
+                    id
+                  }
+              }
             }
           }
+    }
+    `).then(res => {
+        if(res.errors) {
+            return Promise.reject(res.errors)
         }
-      }
-    `).then(result => {
-      result.data.allDatoCmsWork.edges.map(({ node: work }) => {
-        createPage({
-          path: `works/${work.slug}`,
-          component: path.resolve(`./src/templates/work.js`),
-          context: {
-            slug: work.slug,
-          },
+
+        res.data.allDatoCmsProduct.edges.forEach(({node}) => {
+            createPage({
+                path: `/product/${node.id}-${node.genre.id}/`,
+                component: detailTemplate,
+                context: {
+                    id: node.id,
+                    category: node.genre.id
+                }
+            })
         })
-      })
-      resolve()
     })
-  })
+
+    // Lanjutin bikin dua promise
+    const secondpromise = graphql(`{
+        allDatoCmsProduct {
+            edges {
+              node {
+                genre {
+                    id
+                  }
+              }
+            }
+          }
+    }`).then(res => {
+        if(res.errors) {
+            return Promise.reject(res.errors)
+        }
+
+        res.data.allDatoCmsProduct.edges.forEach(({node}) => {
+            createPage({
+                path: `/products/${node.genre.id}`,
+                component: productsTemplate,
+                context: {
+                    category: node.genre.id
+                }
+            })
+        })
+    })
+
+    return Promise.all([firstpromise, secondpromise])
 }

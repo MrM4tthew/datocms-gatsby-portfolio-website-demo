@@ -1,0 +1,174 @@
+.sidenav{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    flex-direction: column;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.sidenav > .promo{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0rem;
+    background-color: lightgray;
+}
+
+.sidenav > .navbar1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.sidenav > .navbar1 > a{
+    margin-right: auto;
+}
+
+.sidenav > .navbar1 > a > img {
+    width: 8rem;
+    object-fit: contain;
+}
+
+.sidenav > .navbar1 > .burgerIcon{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.sidenav > .navbar1 > .searchIcon{
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.containernav > .navMenu{
+    background-color: #e3e3e3;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -200%;
+    transition: 850ms;
+    z-index: 3;
+}
+
+.containernav > .navMenu > .topitems{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+}
+
+.containernav > .navMenu > .topitems > img{
+    width: 8rem;
+    margin-right: auto;
+}
+
+.containernav > .navMenu.active{
+    right: 0;
+    transition: 450ms;
+}
+
+.containernav > .navMenu > .navitems,
+.sidenav > .navbar > .navSearch > .navitems{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 1rem;
+}
+
+.containernav > .navMenu > .navitems > a,
+.sidenav > .navbar > .navSearch > .navitems{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    padding: 0.5rem 1rem;
+    /* border-bottom: 0.1rem solid black; */
+    border-top: 0.1rem solid black;
+    width: 100vw;
+    transition: 400ms;
+    background-color: #e3e3e3;
+}
+
+.containernav > .navMenu > .navitems > a:hover{
+    background-color: black;
+    color: white;
+}
+
+/* search nav */
+.containernav > .navSearch{
+    background-color: #e3e3e3;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: -200%;
+    transition: 850ms;
+    z-index: 3;
+}
+
+.containernav > .navSearch.active{
+    left: 0;
+    transition: 350ms;
+}
+
+.containernav > .navSearch > .topitems{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+}
+
+.containernav > .navSearch > .topitems > form{
+    width: 90%;
+}
+
+.containernav > .navSearch > .topitems > .xbtn{
+    font-size: 1.3rem;
+    width: 10%;
+}
+
+.containernav > .navSearch > .topitems > form > input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 0.1rem solid black;
+    width: 90%;
+}
+
+.containernav > .navSearch > .topitems > form > input:focus{
+    background-color: transparent;
+}
+
+.containernav > .navSearch > .topitems > form > button{
+    border: none;
+    background-color: transparent;
+}
+
+.containernav > .navSearch > .navitems{
+    display: flex;
+    flex-direction: column;
+}
+.containernav > .navSearch > .navitems > .searchtop{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.containernav{
+    display: none;
+}
+
+@media only screen and (max-width: 1120px) {
+    .containernav{
+        display: block;
+        
+    }
+}

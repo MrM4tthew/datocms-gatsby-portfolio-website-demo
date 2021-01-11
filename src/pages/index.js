@@ -139,7 +139,7 @@ export default function Home({data}) {
                     <span className="mainTitle">Pelayanan</span>
                     <div className="listPelayanan">
                         <div className="pelayanan p1">
-                            <img className="desktopImg" src="/image/pelayananmeborevisi1desktop.png" alt=""/>
+                            <img className="desktopImg" src="../../assets/image/pelayananmeborevisi1desktop.png" alt=""/>
                             <img className="mobileImg" src="/image/pelayananmeborevisi1mobile.png" alt=""/>
                         </div>
                         <div className="pelayanan p2">

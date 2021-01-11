@@ -55,23 +55,8 @@ export default () => {
                     </form>
                     <AiIcons.AiOutlineClose className="xbtn" onClick={showSearch}/>
                 </div>
-                {/* <ul className="navitems">
-                    <Link to=""><a><li className="navcontent">Produk</li></a></Link>
-                    <Link to=""><a><li className="navcontent">Aksesoris</li></a></Link>
-                    <Link to=""><a><li className="navcontent">Kasur busa</li></a></Link>
-                    <Link to=""><a><li className="navcontent">Kasur lipat</li></a></Link>
-                    <Link to=""><a style={{borderBottom: '0.1rem solid black'}}><li className="navcontent">Sofa bed</li></a></Link>
-                </ul> */}
             </nav>
         </div>
     )
 }
-
-{/* <ul>
-                    <Link className="link" to="/products"><li>Produk</li></Link>
-                    {data.categories.edges.map(({node: cat}) => (
-                        <Link className="link" to={`/products/${cat.id}`}><li>{cat.name}</li></Link>
-                    ))}
-                    
-                </ul> */}
 

@@ -1,8 +1,8 @@
 const Promise = require('bluebird')
 const path = require('path')
 
-exports.createPages = ({boundActionCreators, graphql}) => {
-    const { createPage } = boundActionCreators
+exports.createPages = ({actions, graphql}) => {
+    const { createPage } = actions
 
     const detailTemplate = path.resolve('src/templates/product-detail.js');
     const productsTemplate = path.resolve('src/templates/products-option.js')

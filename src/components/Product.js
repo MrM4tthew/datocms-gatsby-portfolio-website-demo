@@ -1,7 +1,6 @@
 import '../styles/product.scss'
 import React from "react"
 import { Markup } from 'interweave'
-import Img from 'gatsby-image'
 import {Link} from 'gatsby'
 const Product = (props) => {
 

@@ -4,7 +4,7 @@ function Footer() {
     return (
         <div className="footer">
             <div className="left">
-                <img src="/image/blacklogo.svg" alt=""/>
+                <div className="mebo__logo"></div>
                 <p>Grosir Busa merupakan toko online yang memudahakan anda dalam memilih kasur busa berkualitas dan tepat sesuai dengan kebutuhan, serta menyediakan laynana pememsanan custom ukuran kasur busa sesuai dengan keinginan anda. Grosir Busa juga memiliki toko di Shopee marketplace, kami menjual berbagai jenis kasur busa dengan variasi bahan dan ukuran. Semua produk yang dijual oleh Grosir Busa merupakan produk berstandard Jepang dan bergaransi resmi.</p>
             </div>
             <div className="right">
@@ -14,8 +14,8 @@ function Footer() {
                 WhatsApp: +6287819973671 | Shopee : Grosir Busa
                 </p>
                 <div className="kontakimg">
-                    <img clasName="wa" src="/image/walogo1.svg" alt=""/>
-                    <img src="/image/shopeelogo1.svg" alt=""/>
+                    <div className="wa__logo wa"></div>
+                    <div className="shopee__logo"></div>
                 </div>
             </div>
         </div>

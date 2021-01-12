@@ -12,6 +12,14 @@
             width: 8rem;
             margin-bottom: 1rem;
         }
+        .mebo__logo{
+            background-image: url('../../assets/image/blacklogo.svg');
+            width: 8rem;
+            height: 1.5rem;
+            background-size: 8rem 1.5rem;
+            background-repeat: no-repeat;
+            margin-bottom: 0.5rem;
+        }
         p{
             font-size: 0.8rem;
         }
@@ -34,8 +42,22 @@
         .kontakimg{
             display: flex;
             flex-direction: row;
-            width: 10%;
+            width: 100%;
             align-items: flex-end;
+            .wa__logo{
+                background-image: url('../../assets/image/walogo1.svg');
+                width: 4.5rem;
+                height: 1.5rem;
+                background-size: 4rem 1.5rem;
+                background-repeat: no-repeat;
+            }
+            .shopee__logo{
+                background-image: url('../../assets/image/shopeelogo1.svg');
+                width: 5rem;
+                height: 1.5rem;
+                background-size: 4rem 1.5rem;
+                background-repeat: no-repeat;
+            }
         }
         img{
             width: 5rem;

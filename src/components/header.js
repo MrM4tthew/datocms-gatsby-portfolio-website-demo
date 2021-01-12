@@ -25,7 +25,7 @@ export default () => (
             </div>
             <div className="navbar">
                 <Link className="linkimg" to="/">
-                    <img src="/image/blacklogo.svg" alt=""/>
+                    <div className="mebo__logo"></div>
                 </Link>
                 <ul>
                     <Link className="link" to="/products"><li>Produk</li></Link>

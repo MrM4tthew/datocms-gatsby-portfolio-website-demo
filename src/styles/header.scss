@@ -22,8 +22,16 @@
         background-color: white;
         .linkimg{
             margin-right: 2%;
-            img{
+            .mebo__logo{
                 width: 8rem;
+                background-image: url('../../assets/image/blacklogo.svg');
+                height: 4rem;
+                background-size: 8rem 4rem;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                background-repeat: no-repeat;
+                border: none;
+                
             }
         }
         ul{

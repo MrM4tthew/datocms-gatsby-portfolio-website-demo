@@ -36,7 +36,7 @@ export default () => {
             </div>   
             <nav className={sidebar ? 'navMenu active' : 'navMenu'}>
                 <div className="topitems">
-                    <img src="/image/blacklogo.svg" alt=""/>
+                    <div className="mebo__logo"/>
                     <AiIcons.AiOutlineClose onClick={showSidebar}/>
                 </div>
                 <ul className="navitems">

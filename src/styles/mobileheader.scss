@@ -61,11 +61,16 @@
     font-size: 1.5rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
     padding: 2rem;
 }
 
-.containernav > .navMenu > .topitems > img{
+.containernav > .navMenu > .topitems > .mebo__logo{
+    background-image: url('../../assets/image/blacklogo.svg');
     width: 8rem;
+    height: 2rem;
+    background-size: 8rem 2rem;
+    background-repeat: none;
     margin-right: auto;
 }
 

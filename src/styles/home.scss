@@ -123,6 +123,20 @@
             grid-template-columns: 1fr 1fr;
             column-gap: 1%;
             .artikel{
+                .img__artikel1{
+                    background-image: url('../../assets/image/MEBOartikel1.png');
+                    width: 100%;
+                    height: 20vw;
+                    background-size: 100% 20vw;
+                    background-repeat: no-repeat;
+                }
+                .img__artikel2{
+                    background-image: url('../../assets/image/MEBOartikel2.png');
+                    width: 100%;
+                    height: 20vw;
+                    background-size: 100% 20vw;
+                    background-repeat: no-repeat;
+                }
                 .link{
                     text-decoration: none;
                     color: black;
@@ -149,6 +163,27 @@
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 1%;
             .artikel{
+                .img__artikel3{
+                    background-image: url('../../assets/image/MEBOartikel3.png');
+                    width: 100%;
+                    height: 20vw;
+                    background-size: 100% 20vw;
+                    background-repeat: no-repeat;
+                }
+                .img__artikel4{
+                    background-image: url('../../assets/image/MEBOartikel4.png');
+                    width: 100%;
+                    height: 20vw;
+                    background-size: 100% 20vw;
+                    background-repeat: no-repeat;
+                }
+                .img__artikel5{
+                    background-image: url('../../assets/image/MEBOartikel5.png');
+                    width: 100%;
+                    height: 20vw;
+                    background-size: 100% 20vw;
+                    background-repeat: no-repeat;
+                }
                 .link{
                     text-decoration: none;
                     color: black;
@@ -187,15 +222,40 @@
     margin-bottom: 3rem;
 }
 
-.pelayananContainer > .listPelayanan > .pelayanan{
-    margin-bottom: 1.5rem;
-}
-.pelayananContainer > .listPelayanan > .p1 > img{
-    width: 100%;
-}
-
-.pelayananContainer > .listPelayanan > .p2 > img{
-    width: 100%;
+.pelayananContainer{
+    .listPelayanan{
+        .pelayanan{
+            margin-bottom: 1.5rem;
+        }
+        .p1{
+            .desktopImg{
+                background-image: url('../../assets/image/MEBOpelayanan1desk.png');
+                width: 100%;
+                height: 25vw;
+                background-size: 100% 25vw;
+            }
+            .mobileImg{
+                background-image: url('../../assets/image/MEBOpelayanan1mob.png');
+                width: 100%;
+                height: 35vw;
+                background-size: 100% 35vw;
+            }
+        }
+        .p2{
+            .desktopImg{
+                background-image: url('../../assets/image/MEBOpelayanan2desk.png');
+                width: 100%;
+                height: 25vw;
+                background-size: 100% 25vw;
+            }
+            .mobileImg{
+                background-image: url('../../assets/image/MEBOpelayanan2mob.png');
+                width: 100%;
+                height: 35vw;
+                background-size: 100% 35vw;
+            }
+        }
+    }
 }
 .kategoriContainer > .listKategori{
     display: grid;
@@ -219,6 +279,20 @@
         font-size: 1.5rem;
         font-weight: 600;
         margin-bottom: 1.5rem;
+    }
+    .promo__img{
+        background-image: url('../../assets/image/MEBOpromo1desk.png');
+        width: 100%;
+        height: 40vw;
+        background-size: 100% 40vw;
+        background-repeat: no-repeat;
+    }
+    .promom__img{
+        background-image: url('../../assets/image/MEBOpromo1mob.png');
+        width: 100%;
+        height: 40vw;
+        background-size: 100% 40vw;
+        background-repeat: no-repeat;
     }
     margin-bottom: 3rem;
 }
@@ -344,10 +418,46 @@
     .artikelContainer{
         .listArtikel{
             .atas{
+                .artikel{
+                    .img__artikel1{
+                        width: 100%;
+                        height: 40vw;
+                        background-size: 100% 40vw;
+                        background-repeat: no-repeat;
+                    }
+                    .img__artikel2{
+                        width: 100%;
+                        height: 40vw;
+                        background-size: 100% 40vw;
+                        background-repeat: no-repeat;
+                    }
+                }
                 grid-template-columns: 1fr;
                 row-gap: 1%;
+                
             }
             .bawah{
+                .artikel{
+                    .img__artikel3{
+                        width: 100%;
+                        height: 40vw;
+                        background-size: 100% 40vw;
+                        background-repeat: no-repeat;
+                    }
+                    .img__artikel4{
+                        width: 100%;
+                        height: 40vw;
+                        background-size: 100% 40vw;
+                        background-repeat: no-repeat;
+                    }
+                    .img__artikel5{
+                        width: 100%;
+                        height: 40vw;
+                        background-size: 100% 40vw;
+                        background-repeat: no-repeat;
+                    }
+                    
+                }
                 grid-template-columns: 1fr;
                 row-gap: 1%;
             }

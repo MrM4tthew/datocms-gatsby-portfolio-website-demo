@@ -83,10 +83,10 @@ export default function Home({data}) {
                         </CarouselProvider>
                     </div>
                 </div>
-                <div className="keuntunganContainer">
+                {/* <div className="keuntunganContainer">
                     <span className="mainTitle">Keuntungan belanja di MEBO</span>
                     <Keuntungan />
-                </div>
+                </div> */}
                 <div className="artikelContainer">
                     <span className="mainTitle">Artikel & Berita</span>
                     <div className="listArtikel">
@@ -140,12 +140,12 @@ export default function Home({data}) {
                     <span className="mainTitle">Pelayanan</span>
                     <div className="listPelayanan">
                         <div className="pelayanan p1">
-                            <div className="desktopImg" src="/image/pelayananmeborevisi1desktop.png" />
-                            <div className="mobileImg" src="/image/pelayananmeborevisi1mobile.png" />
+                            <div className="desktopImg" />
+                            <div className="mobileImg" />
                         </div>
                         <div className="pelayanan p2">
-                            <img className="desktopImg" src="/image/pelayananmeborevisi2desktop.png" alt=""/>
-                            <img className="mobileImg" src="/image/pelayananmeborevisi2mobile.png" alt=""/>
+                            <div className="desktopImg" />
+                            <div className="mobileImg" />
                         </div>
                     </div>      
                 </div>

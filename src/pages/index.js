@@ -101,7 +101,7 @@ export default function Home({data}) {
                             </div>
                             <div className="artikel">
                                 <Link className="link" to="/blog/blog2">
-                                <img src="image/artikelkasurbusa2.png" alt=""/>
+                                <img src="/../../image/artikelkasurbusa2.png" alt=""/>
                                 <span className="first">Tips kesehatan</span>
                                 <span className="second">Posisi tidur yang salah dapat menyebabkan nyeri punggung</span>
                                 <p>Tidur seharusnya dapat membuat tubuh menjadi lebih rileks dan segar, namun posisi tidur yang salah dapat menyebabkan nyeri punggung dan beberapa cedera lainnya, berikut beberapa solusinya >></p>
@@ -111,7 +111,7 @@ export default function Home({data}) {
                         <div className="bawah">
                             <div className="artikel">
                                 <Link className="link" to="/blog/blog3">
-                                <img src="image/artikelkasurbusa3.png" alt=""/>
+                                <img src="/../../../image/artikelkasurbusa3.png" alt=""/>
                                 <span className="first">Tips memiliki kasur</span>
                                 <span className="second">Jangan sampai salah memilih kasur</span>
                                 <p>Banyak masalah yang akan muncul ketika menggunakan kasur yang sudah berumur seperti, tungau dapat hidup dan berkembang biak pada kasur tersebut, ada beberapa solusi terhindar dari tungau...</p>
@@ -119,7 +119,7 @@ export default function Home({data}) {
                             </div>
                             <div className="artikel">
                                 <Link className="link" to="/blog/blog4">
-                                <img src="image/artikelkasurbusa4.png" alt=""/>
+                                <img src="/../image/artikelkasurbusa4.png" alt=""/>
                                 <span className="first">Tips memiliki kasur</span>
                                 <span className="second">Jangan sampai salah memilih kasur</span>
                                 <p>Stress dapat mengganggu kamu saat melakukan aktivitas dan akibatnya produktivitas menurun, itu dapat disebabkan oleh kualitas tidur yang tidak maksimal. Lihat tips untuk tidur berkualitas...</p>
@@ -127,7 +127,7 @@ export default function Home({data}) {
                             </div>
                             <div className="artikel">
                                 <Link className="link" to="/blog/blog5">
-                                <img src="image/artikelkasurbusa5.png" alt=""/>
+                                <img src="/image/artikelkasurbusa5.png" alt=""/>
                                 <span className="first">Tips memiliki kasur</span>
                                 <span className="second">Jangan sampai salah memilih kasur</span>
                                 <p>Sebagian orang sering mengalami sulit tidur dengan sebab yang tidak jelas. Hal tersebut sangat mengganggu dan membuat tidak nyaman, ada beberapa cara untuk mengatasi masalah tersebut…</p>
@@ -140,7 +140,7 @@ export default function Home({data}) {
                     <span className="mainTitle">Pelayanan</span>
                     <div className="listPelayanan">
                         <div className="pelayanan p1">
-                            <img className="desktopImg" src="../../assets/image/pelayananmeborevisi1desktop.png" alt=""/>
+                            <img className="desktopImg" src="/image/pelayananmeborevisi1desktop.png" alt=""/>
                             <img className="mobileImg" src="/image/pelayananmeborevisi1mobile.png" alt=""/>
                         </div>
                         <div className="pelayanan p2">

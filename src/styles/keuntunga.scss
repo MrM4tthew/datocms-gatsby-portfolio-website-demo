@@ -10,20 +10,26 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    padding: 2rem;
-}
-
-.contain > .title{
-    font-weight: 600;
-}
-
-.contain > .spacing{
-    height: 10rem;
-    width: 100%;
-}
-
-.contain > .content{
-    font-size: 0.9rem;
+    padding-top: 100%;
+    position: relative;
+    .text__container{
+        padding: 5%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        .title{
+            font-weight: 600;
+        }
+        .spacing{
+            height: 70%;
+            width: 100%;
+        }
+        .content{
+            font-size: 0.9rem;
+        }
+    }
 }
 
 .contain.c1{background-image: url('../../assets/image/keuntunganmebo1.png');}
@@ -31,19 +37,63 @@
 .contain.c3{background-image: url('../../assets/image/keuntunganmebo3.png');}
 .contain.c4{background-image: url('../../assets/image/keuntunganmebo4.png');}
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1275px){
+    .contain{
+        .text__container{
+            .spacing{
+                height: 60%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .contain{
+        .text__container{
+            .spacing{
+                height: 54%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .contain{
+        .text__container{
+            .spacing{
+                height: 40%;
+            }
+        }
+        
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
     .kContainer{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         row-gap: 1rem;
         column-gap: 1rem;
     }
-}
+    .contain{
+        font-size: 1.5rem;
+        .text__container{
+            .spacing{
+                height: 40%;
+            }
+            .title{
+                font-size: 0.9em;
+            }
 
-@media only screen and (max-width: 900px) {
-    .keuntunganContainer{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 1rem;
+            .content{
+                font-size: 0.8em;
+            }
+        }
     }
 }
+
+// @media only screen and (max-width: 450px) {
+    
+// }

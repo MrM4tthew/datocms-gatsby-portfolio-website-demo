@@ -11,3 +11,32 @@
     --secondary-color: #e6e5e1;
     --complement-color: black;
 }
+
+.cookie__crumble{
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 1rem;
+    top: 6.9rem;
+    z-index: 2;
+    padding: 0.5rem 0rem;
+    padding-left: 5rem;
+    width: 100vw;
+    background-color: #f5f5f5;
+    .cookie__link{
+        text-decoration: none;
+        color: black;
+        transition: 150ms;
+    }
+    .cookie__link:hover{
+        color: #969696;
+    }
+}
+
+@media only screen and (max-width: 1120px){
+    .cookie__crumble{
+        top: 6.1rem;
+        padding-left: 1rem;
+    }
+}

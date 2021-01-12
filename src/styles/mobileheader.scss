@@ -69,12 +69,20 @@
     margin-right: auto;
 }
 
+.containernav > .navMenu > .topitems > svg{
+    cursor: pointer;
+}
+
 .containernav > .navMenu.active{
     right: 0;
     transition: 450ms;
 }
 
-.containernav > .navMenu > .navitems,
+.containernav > .navMenu > .navitems{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
 .sidenav > .navbar > .navSearch > .navitems{
     display: flex;
     flex-direction: column;
@@ -82,13 +90,23 @@
     padding: 1rem;
 }
 
-.containernav > .navMenu > .navitems > a,
+.containernav > .navMenu > .navitems > a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    padding: 0.5rem 1.8rem;
+    
+    border-top: 0.1rem solid black;
+    width: 100vw;
+    transition: 400ms;
+    background-color: #e3e3e3;
+}
 .sidenav > .navbar > .navSearch > .navitems{
     text-decoration: none;
     color: black;
     font-size: 1.3em;
     padding: 0.5rem 1rem;
-    /* border-bottom: 0.1rem solid black; */
+    
     border-top: 0.1rem solid black;
     width: 100vw;
     transition: 400ms;
@@ -123,7 +141,8 @@
 .containernav > .navSearch > .topitems{
     display: flex;
     flex-direction: row;
-    padding: 2rem;
+    align-items: center;
+    padding: 5%;
 }
 
 .containernav > .navSearch > .topitems > form{
@@ -131,8 +150,9 @@
 }
 
 .containernav > .navSearch > .topitems > .xbtn{
-    font-size: 1.3rem;
+    font-size: 2rem;
     width: 10%;
+    cursor: pointer;
 }
 
 .containernav > .navSearch > .topitems > form > input{
@@ -140,7 +160,8 @@
     background-color: transparent;
     outline: none;
     border-bottom: 0.1rem solid black;
-    width: 90%;
+    width: 80%;
+    font-size: 2rem;
 }
 
 .containernav > .navSearch > .topitems > form > input:focus{
@@ -150,6 +171,8 @@
 .containernav > .navSearch > .topitems > form > button{
     border: none;
     background-color: transparent;
+    font-size: 1.6rem;
+    width: 20%;
 }
 
 .containernav > .navSearch > .navitems{

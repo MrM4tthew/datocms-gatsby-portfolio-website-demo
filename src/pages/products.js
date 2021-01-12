@@ -4,6 +4,8 @@ import {graphql, StaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
 import "../styles/items.scss"
 import {Link} from 'gatsby'
+import withLocation from '../components/withLocation'
+import { CgSmileNone } from 'react-icons/cg'
 
 export default () => (
     <StaticQuery 
@@ -17,6 +19,7 @@ export default () => (
                 price
                 shortdescription
                 description
+                descriptionukuran
                 genre{
                     id
                 }
@@ -42,6 +45,9 @@ export default () => (
     `}
     render={data => (
         <Layout>
+            <div className="cookie__crumble">
+                <span><Link to="/" className="cookie__link">Home</Link> / Produk</span>
+            </div>
             <div className="products__container">
                 <div className="sidenav">
                     <span className="sidenav__title">kategori</span>
@@ -60,7 +66,7 @@ export default () => (
                 <div className="item__count">
                         <span>{data.products.edges.length} barang</span>
                     </div>
-                    <span>Semua barang</span>
+                    <span className="list__info">Semua barang</span>
                     <div className="items">  
                     {data.products.edges.map(({node: product}) => (
                         <Link className="link" to={`/product/${product.id}-${product.genre.id}/`}>
@@ -71,6 +77,7 @@ export default () => (
                                 <div className="list__content">
                                     <span className="list__title">{product.name}</span>
                                     <span className="list__desc">{product.shortdescription}</span>
+                                    <span className="list__desc">{product.descriptionukuran}</span>
                                 </div>
                             </div>
                         </Link>

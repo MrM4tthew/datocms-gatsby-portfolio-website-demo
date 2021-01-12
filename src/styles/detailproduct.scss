@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     font-size: 1rem;
+    margin-top: 3rem;
     .topdetail{
         display: grid;
         grid-template-columns: 55% 43%;
@@ -59,6 +60,27 @@
                     justify-content: center;
                 }
             }
+
+            .whatsapp__btn{
+                text-decoration: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 0.7rem 1rem;
+                font-size: 1.2rem;
+                border: 0.1rem solid black;
+                background-color: transparent;
+                transition: 150ms;
+                color: black;
+                svg{
+                    margin-right: 0.2rem;
+                }
+            }
+            .whatsapp__btn:hover{
+                background-color: black;
+                color: white;
+            }
         }
     }
     .middetail{
@@ -76,9 +98,45 @@
             }
         }
     }
+
+    .detail__line{
+        width: 90vw;
+        height: 0.2rem;
+        border-bottom: 0.1rem solid black;
+    }
+
+    .rekomen__list{
+        display: flex;
+        flex-direction: column;
+        .mainTitle{
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.3rem;
+        }
+        .carousel__container{
+            .sliderContainer{
+                display: grid;
+                grid-template-columns: 1% 98% 1%;
+                .Button{
+                    background-color: transparent;
+                    border: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1;
+                    img{
+                        width: 3vw;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.snipcart-add-item{
+.add-item{
     background-color: orange;
     border: none;
     padding: 0.7rem 1rem;
@@ -87,6 +145,9 @@
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 1rem;
     svg{
         font-size: 1.2em;
         margin-right: 0.5em;
@@ -95,17 +156,25 @@
 
 @media only screen and (max-width: 1120px) {
     .detail__container{
-        margin-top: 6rem;
+        margin-top: 8rem;
         padding: 1rem 1rem;
     }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 810px){
     .detail__container{
-        margin-top: 6rem;
-        padding: 1rem 1rem;
+        .rekomen__list{
+            .carousel__container.mobiledes{
+                display: block;
+            }
+            .carousel__container.mobile{
+                display: none;
+            }
+        }
     }
+}
 
+@media only screen and (max-width: 680px) {
     .detail__container{
         .topdetail{
             grid-template-columns: 1fr;
@@ -116,5 +185,14 @@
             grid-template-columns: 1fr;
             row-gap: 4rem;
         } 
+
+        .rekomen__list{
+            .carousel__container.mobiledes{
+                display: none;
+            }
+            .carousel__container.mobile{
+                display: block;
+            }
+        }
     }
 }

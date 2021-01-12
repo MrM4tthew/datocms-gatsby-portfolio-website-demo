@@ -15,14 +15,15 @@ export default function Home({data}) {
     return (
         <Layout>
         <div className="imgcontainer">
-            <div className="imgContent">
-                <h2>Diskon Hingga <br/>50%</h2>
+            {/* <div className="imgContent">
+                <h2>Diskon Hingga <br/><span style={{fontSize: "6rem"}}>50%</span></h2>
                 <p>Belanja di MEBO melalui <br/>
                 shopee, dapatkan berbagai <br/>
                 promo menarik
                 </p>
                 <a>Telusuri >></a>
-            </div>
+            </div> */}
+            <img style={{width: "100vw", objectFit: "contain"}} src="/image/kasurtopmobile.png" alt=""/>
         </div>
         <div className="homeContent">
                 <div className="item__carousel">
@@ -155,7 +156,7 @@ export default function Home({data}) {
                                 categories.map( ({node: category}) => (
                                     <div className="kategori__card">
                                         <Link to={`/products/${category.id}`}>
-                                            {/* <img src={category.image.url} alt=""/> */}
+                                            <img src={category.image.url} alt=""/>
                                             <span>{category.name}</span>
                                         </Link>
                                         

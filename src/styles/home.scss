@@ -1,9 +1,9 @@
 .imgcontainer{
-    background-image: url('../../assets/image/topimage.png');
+    // background-image: url('../../assets/image/topimage.png');
     width: 100%;
     height: 30rem;
-    background-size: cover;
-    background-repeat: no-repeat;
+    // background-size: cover;
+    // background-repeat: no-repeat;
 }
 
 .imgcontainer > .imgContent {
@@ -44,9 +44,9 @@
 .homeContent {
     padding: 1rem 5rem;
     
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
 }
 
 // .mainTitle {
@@ -109,6 +109,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 3rem;
+    height: 100%;
     .mainTitle{
         display: flex;
         justify-content: center;
@@ -203,6 +204,10 @@
     column-gap: 1vw;
 }
 
+
+
+
+
 // Promo
 
 .promoContainer{
@@ -231,6 +236,7 @@
 }
 
 // kategori
+
 .kategoriContainer{
     .mainTitle{
         display: flex;
@@ -244,21 +250,24 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 3%;
         .kategori__card{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             a{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 text-decoration: none;
                 color: black;
                 img{
                     width: 100%;
                 }
                 span{
+                    font-weight: 600;
                     padding: 0.5rem 0rem;
                 }
             }
         }
     }
+    margin-bottom: 2rem;
 }
 
 /* Slider */
@@ -302,13 +311,6 @@
 }
 
 @media only screen and (max-width: 975px) {
-    // .mobile{
-    //     display: block;
-    // }
-    
-    // .mobiled{
-    //     display: block;
-    // }
     
     .mobileImg{
         display: block;
@@ -330,7 +332,11 @@
     .carousel__container.desktop{
         display: none;
     }
-    
+    .kategoriContainer{
+        .listKategori{
+            grid-template-columns: 1fr 1fr;
+        }  
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -339,11 +345,11 @@
         .listArtikel{
             .atas{
                 grid-template-columns: 1fr;
-                column-gap: 1%;
+                row-gap: 1%;
             }
             .bawah{
                 grid-template-columns: 1fr;
-                column-gap: 1%;
+                row-gap: 1%;
             }
         }
     }
@@ -356,4 +362,5 @@
     .carousel__container.mobile{
         display: none;
     }
+    
 }

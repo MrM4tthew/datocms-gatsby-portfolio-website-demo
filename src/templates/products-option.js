@@ -7,6 +7,9 @@ import "../styles/items.scss"
 export default function Template({data}) {
     return(
         <Layout>
+            <div className="cookie__crumble">
+                <span><Link to="/" className="cookie__link">Home</Link> / <Link to="/products" className="cookie__link">Products</Link></span>
+            </div>
             <div className="products__container">
                 <div className="sidenav">
                     <span className="sidenav__title">kategori</span>
@@ -26,7 +29,7 @@ export default function Template({data}) {
                     <div className="item__count">
                         <span>{data.rekomend.edges.length} barang</span>
                     </div>
-                    <span>menunjukkan hasil <b>{data.rekomend.edges[0].node.genre.name}</b></span>
+                    <span className="list__info">menunjukkan hasil "<b>{data.rekomend.edges[0].node.genre.name}</b>"</span>
                     <div className="items">
                     {data.rekomend.edges.map(({node: product}) => (
                         <Link className="link" to={`/product/${product.id}-${product.genre.id}/`}>

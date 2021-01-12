@@ -44,14 +44,14 @@ export default () => {
                     <Link to="/products/DatoCmsGenre-14776902-en" onClick={showSidebar}><li className="navcontent">Aksesoris</li></Link>
                     <Link to="/products/DatoCmsGenre-14776899-en" onClick={showSidebar}><li className="navcontent">Kasur busa</li></Link>
                     <Link to="/products/DatoCmsGenre-14776900-en" onClick={showSidebar}><li className="navcontent">Kasur lipat</li></Link>
-                    <Link to="/products/DatoCmsGenre-14776901-en" onClick={showSidebar}><li className="navcontent">Sofa bed</li></Link>
+                    <Link to="/products/DatoCmsGenre-14776901-en" style={{borderBottom: "0.1rem solid black"}} onClick={showSidebar}><li className="navcontent">Sofa bed</li></Link>
                 </ul>
             </nav>
             <nav className={search ? 'navSearch active' : 'navSearch'}>
                 <div className="topitems">
-                    <form action="products" method="GET">
-                        <input type="text" name="search" placeholder="search for something" required/>
-                        <button type="submit"><FaIcons.FaSearch /></button>
+                    <form action="barang">
+                        <input type="text" name="item" placeholder="bantal...." required/>
+                        {/* <button type="submit"><FaIcons.FaSearch /></button> */}
                     </form>
                     <AiIcons.AiOutlineClose className="xbtn" onClick={showSearch}/>
                 </div>

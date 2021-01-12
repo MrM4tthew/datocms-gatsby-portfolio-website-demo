@@ -1,0 +1,35 @@
+.blog__container{
+    margin-bottom: 3rem;
+    .blogimg{
+        width: 100vw;
+        height: 30vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .blogimg.i1{background-image: url('../../assets/image/artikelkasurbusa1.png');}
+    .blogimg.i2{background-image: url('../../assets/image/artikelkasurbusa2.png');}
+    .blogimg.i3{background-image: url('../../assets/image/artikelkasurbusa3.png');}
+    .blogimg.i4{background-image: url('../../assets/image/artikelkasurbusa4.png');}
+    .blogimg.i5{background-image: url('../../assets/image/artikelkasurbusa5.png');}
+
+    .blog__content{
+        h2{
+            text-align: center;
+            margin: 1.3rem 0rem;
+            font-size: 1.2rem;
+        }
+        p{
+            padding: 0.5rem 5vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+    .blog__container{
+        margin-top: 6em;
+    }
+    .blogimg{
+        height: 100vw;
+    }
+}

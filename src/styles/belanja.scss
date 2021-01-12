@@ -2,10 +2,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 2vw;
+    a{
+        .promoimg{
+            img{
+                width: 8rem;
+            }
+            
+        }
+    }
 }
 
 .promoimg{background-image: url('../../assets/image/pelayananmebo1.png'); background-size: cover; padding: 5%; display: flex; justify-content: center;}
 
-.promoimg > img{
-    width: 10rem;
+
+
+@media only screen and (max-width: 480px) {
+    .promoimg > img{
+        width: 7rem;
+    }
 }

@@ -13,7 +13,7 @@ const Product = (props) => {
                     <img className="image" src={product.image.url} alt=""/>
                 </div>
                 <span className="title">{product.name}</span>
-                <Markup content={product.shortDescription}/>
+                <Markup content={product.shortdescription}/>
                 <Markup content={product.descriptionukuran}/>
             </Link>
         </div>

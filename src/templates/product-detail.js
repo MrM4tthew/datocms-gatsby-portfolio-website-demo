@@ -1,10 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
+import Product from "../components/Product"
 import { graphql, Link } from 'gatsby'
 import { Markup } from 'interweave'
 import "../styles/detailproduct.scss"
 import * as CgIcons from "react-icons/cg";
+import * as FaIcons from "react-icons/fa";
+import {CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel"
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 export default function Template({data}) {
     const productInfo = data.products.edges[0].node;
@@ -22,6 +26,9 @@ export default function Template({data}) {
     const rekomendlist = data.rekomend.edges;
     return(
         <Layout>
+            <div className="cookie__crumble">
+                <span><Link to="/" className="cookie__link">Home</Link> / <Link to="/products" className="cookie__link">Produk</Link> / {name}</span>
+            </div>
             <div className="detail__container">
                 <div className="topdetail">
                     <div className="img__container">
@@ -29,23 +36,22 @@ export default function Template({data}) {
                     </div>
                     <div className="topcontent__container">
                         <span className="topcontent t1">{name}</span>
-                        <span className="topcontent t5">{price}</span>
+                        <span className="topcontent t5">Rp. {price}</span>
                         <span className="topcontent t2">{shortdescription}, {ukuran}</span>
                         <div className="topcontent t3">
                             <div className="red__circle"></div>
                             <span className="quality">Japan quality</span>
                         </div>
-                        <button
-                        class="snipcart-add-item"
-                        data-item-id={id}
-                        data-item-price={price}
-                        data-item-url={`/product/${id}-${genreid}`}
-                        data-item-name={name}
-                        data-item-image={imageurl}
+                        <Link to="/whatsapp"
+                        class="add-item"
                         >
                         <CgIcons.CgShoppingCart />
                         Tambah ke keranjang
-                        </button>
+                        </Link>
+                        <a className="whatsapp__btn" href="https://wa.me/message/DADPPU4RS55DK1">
+                            <FaIcons.FaWhatsapp />
+                            <span>Whatsapp</span>
+                        </a>
                     </div>
                 </div>
                 <div className="middetail">
@@ -58,13 +64,69 @@ export default function Template({data}) {
                         <Markup content={shipping} />
                     </div>
                 </div>
+                <div className="detail__line"></div>
                 <div className="rekomen__list">
-                    {rekomendlist.map(({node: rekomend}) => (
-                        <Link to={`/product/${rekomend.id}-${rekomend.genre.id}`}>
-                            <img src={rekomend.image.url} alt=""/>
-                            <h3>{rekomend.name}</h3>
-                        </Link>
-                    ))}
+                    <span className="mainTitle">Rekomendasi</span>
+                    <div className="carousel__container desktop">
+                        <CarouselProvider
+                        naturalSlideWidth={100}
+                        naturalSlideHeight={150}
+                        totalSlides={rekomendlist.length}
+                        visibleSlides={4}
+                        >
+                            <div className="sliderContainer">
+                                <ButtonBack className="Button back"><img src="/image/left.svg" alt=""/></ButtonBack>
+                                <Slider className="slide__img">
+                                    {rekomendlist.map(({node: rekomend}) => (
+                                        <Slide>
+                                            <Product key={rekomend.id} product={ rekomend }/>   
+                                        </Slide>
+                                    ))}
+                                </Slider>
+                                <ButtonNext className="Button next"><img src="/image/right.svg" alt=""/></ButtonNext>
+                            </div>  
+                        </CarouselProvider>
+                    </div>
+                    <div className="carousel__container mobile">
+                        <CarouselProvider
+                        naturalSlideWidth={100}
+                        naturalSlideHeight={150}
+                        totalSlides={rekomendlist.length}
+                        visibleSlides={2}
+                        >
+                            <div className="sliderContainer">
+                                <ButtonBack className="Button back"><img src="/image/left.svg" alt=""/></ButtonBack>
+                                <Slider className="slide__img">
+                                    {rekomendlist.map(({node: rekomend}) => (
+                                        <Slide>
+                                            <Product key={rekomend.id} product={ rekomend }/>   
+                                        </Slide>
+                                    ))}
+                                </Slider>
+                                <ButtonNext className="Button next"><img src="/image/right.svg" alt=""/></ButtonNext>
+                            </div>  
+                        </CarouselProvider>
+                    </div>
+                    <div className="carousel__container mobiledes">
+                        <CarouselProvider
+                        naturalSlideWidth={100}
+                        naturalSlideHeight={150}
+                        totalSlides={rekomendlist.length}
+                        visibleSlides={3}
+                        >
+                            <div className="sliderContainer">
+                                <ButtonBack className="Button back"><img src="/image/left.svg" alt=""/></ButtonBack>
+                                <Slider className="slide__img">
+                                    {rekomendlist.map(({node: rekomend}) => (
+                                        <Slide>
+                                            <Product key={rekomend.id} product={ rekomend }/>   
+                                        </Slide>
+                                    ))}
+                                </Slider>
+                                <ButtonNext className="Button next"><img src="/image/right.svg" alt=""/></ButtonNext>
+                            </div>  
+                        </CarouselProvider>
+                    </div>
                 </div>
             </div>
         </Layout>

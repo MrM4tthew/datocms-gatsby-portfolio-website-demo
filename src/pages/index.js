@@ -93,7 +93,7 @@ export default function Home({data}) {
                         <div className="atas">
                             <div className="artikel">
                                 <Link className="link" to="/blog/blog1">
-                                <img src="image/artikelkasurbusa1.png" alt=""/>
+                                <img src="../../assets/image/artikelkasurbusa1.png" alt=""/>
                                 <span className="first">Tips memiliki kasur</span>
                                 <span className="second">Jangan sampai salah memilih kasur</span>
                                 <p>Terdapat banyak sekali jenis kasur yang dijual di pasaran dengan berbagai tingkat kualitas, salah memilih jenis kasur dapat membuat tidur anda menjadi kurang nyenyak, lihat beberapa tips dalam memilih kasur...</p>

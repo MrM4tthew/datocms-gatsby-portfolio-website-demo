@@ -48,6 +48,7 @@ export default function Template({data}) {
                         <CgIcons.CgShoppingCart />
                         Tambah ke keranjang
                         </Link>
+                        <p style={{fontSize: '0.8rem', marginBottom: '1rem'}} className="extranotes">**Maaf, untuk sementara fitur checkout sedang dalam proses pengembangan, anda tetap sapat memesan melalui whatsapp</p>
                         <a className="whatsapp__btn" href="https://wa.me/message/DADPPU4RS55DK1">
                             <FaIcons.FaWhatsapp />
                             <span>Whatsapp</span>

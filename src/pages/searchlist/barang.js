@@ -1,21 +1,19 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 import {graphql, StaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
-import "../styles/items.scss"
+import "../../styles/items.scss"
 import {Link} from 'gatsby'
-import withLocation from '../components/withLocation'
+import withLocation from '../../components/withLocation'
 import PropTypes from 'prop-types'
 
 const barang = ({search}) => {
     const { item } = search;
-
-    console.warn(item);
-
+    const bolditem = <b>{item}</b>
     return(
         <StaticQuery 
             query={graphql`
-            query BarangQuery {
+            query SearchQuery {
             products: allDatoCmsProduct {
                 edges {
                 node {
@@ -68,9 +66,9 @@ const barang = ({search}) => {
                     <div className="content">
                         
                     <div className="item__count">
-                            <span>{data.products.edges.length} barang</span>
+                            <span> {data.products.edges.filter(({node: produk}) => produk.name.toLowerCase().includes(item)).length} barang</span>
                         </div>
-                        <span className="list__info">Hasil pencarian "<b>{item}</b>"</span>
+                        <span className="list__info">{data.products.edges.filter(({node: produk}) => produk.name.toLowerCase().includes(item)).length == 0 ?  "Hasil pencarian tidak ditemukan" : `Hasil pencarian "${item}"` }</span>
                         <div className="items">  
                         {data.products.edges.filter(({node: product}) => product.name.toLowerCase().includes(item)).map(({node: product}) => (
                             <Link className="link" to={`/product/${product.id}-${product.genre.id}/`}>

@@ -49,7 +49,7 @@ export default () => {
             </nav>
             <nav className={search ? 'navSearch active' : 'navSearch'}>
                 <div className="topitems">
-                    <form action="barang">
+                    <form action="/searchlist/barang">
                         <input type="text" name="item" placeholder="bantal...." required/>
                         {/* <button type="submit"><FaIcons.FaSearch /></button> */}
                     </form>

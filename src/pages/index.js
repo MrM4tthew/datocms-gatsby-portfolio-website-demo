@@ -23,7 +23,6 @@ export default function Home({data}) {
                 </p>
                 <a>Telusuri >></a>
             </div> */}
-            <img style={{width: "100vw", objectFit: "contain"}} src="/image/kasurtopmobile.png" alt=""/>
         </div>
         <div className="homeContent">
                 <div className="item__carousel">
@@ -36,13 +35,13 @@ export default function Home({data}) {
                         visibleSlides={4}
                         >
                             <div className="sliderContainer">
-                                <ButtonBack className="Button"><img src="image/left.svg" alt=""/></ButtonBack>
+                                <ButtonBack className="Button"><div className="image__left image"></div></ButtonBack>
                                 <Slider>
                                     {
                                     products.map( ({node: product}) => <Slide><Product key={product.id} product={ product }/></Slide>)
                                     }
                                 </Slider>
-                                <ButtonNext className="Button"><img src="image/right.svg" alt=""/></ButtonNext>
+                                <ButtonNext className="Button"><div className="image__right image"></div></ButtonNext>
                             </div>  
                         </CarouselProvider>
                     </div>
@@ -54,13 +53,13 @@ export default function Home({data}) {
                         visibleSlides={3}
                         >
                             <div className="sliderContainer">
-                                <ButtonBack className="Button"><img src="image/left.svg" alt=""/></ButtonBack>
+                                <ButtonBack className="Button"><div className="image__left image"></div></ButtonBack>
                                 <Slider>
                                     {
                                     products.map( ({node: product}) => <Slide><Product key={product.id} product={ product }/></Slide>)
                                     }
                                 </Slider>
-                                <ButtonNext className="Button"><img src="image/right.svg" alt=""/></ButtonNext>
+                                <ButtonNext className="Button"><div className="image__right image"></div></ButtonNext>
                             </div>  
                         </CarouselProvider>
                     </div>
@@ -72,21 +71,24 @@ export default function Home({data}) {
                         visibleSlides={2}
                         >
                             <div className="sliderContainer">
-                                <ButtonBack className="Button"><img src="image/left.svg" alt=""/></ButtonBack>
+                                <ButtonBack className="Button"><div className="image__left image"></div></ButtonBack>
                                 <Slider>
                                     {
                                     products.map( ({node: product}) => <Slide><Product key={product.id} product={ product }/></Slide>)
                                     }
                                 </Slider>
-                                <ButtonNext className="Button"><img src="image/right.svg" alt=""/></ButtonNext>
+                                <ButtonNext className="Button"><div className="image__right image"></div></ButtonNext>
                             </div>  
                         </CarouselProvider>
                     </div>
+                    <Link to="/products" className="produklain">
+                        <span>Lihat produk lainnya</span>
+                    </Link>
                 </div>
-                {/* <div className="keuntunganContainer">
+                <div className="keuntunganContainer">
                     <span className="mainTitle">Keuntungan belanja di MEBO</span>
                     <Keuntungan />
-                </div> */}
+                </div>
                 <div className="artikelContainer">
                     <span className="mainTitle">Artikel & Berita</span>
                     <div className="listArtikel">

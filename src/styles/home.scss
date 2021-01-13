@@ -1,8 +1,8 @@
 .imgcontainer{
-    // background-image: url('../../assets/image/topimage.png');
+    background-image: url('../../assets/image/MEBOtopdesktop.png');
     width: 100%;
-    height: 30rem;
-    // background-size: cover;
+    height: 40vw;
+    background-size: cover;
     // background-repeat: no-repeat;
 }
 
@@ -63,12 +63,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 2rem;
     .mainTitle{
         display: flex;
         justify-content: center;
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
     }
     .carousel__container{
         width: 100%;
@@ -81,12 +82,34 @@
                 border: none;
                 height: 20%;
                 margin: auto 0rem;
-                img{
+                .image{
                     width: 3vw;
+                    height: 3rem;
+                    background-size: 3vw 3rem;
+                    background-repeat: no-repeat;
+                }
+                .image__left{
+                    background-image: url('../../assets/image/left.svg');
+                }
+                .image__right{
+                    background-image: url('../../assets/image/right.svg');
                 }
             }
         }
     }  
+    .produklain{
+        padding: 1rem;
+        background: transparent;
+        border: 0.1rem solid black;
+        color: black;
+        text-decoration: none;
+        transition: 150ms;
+        margin-bottom: 7rem;
+    }
+    .produklain:hover{
+        background-color: black;
+        color: white;
+    }
 }
 
 // Keuntungnan
@@ -99,7 +122,7 @@
         justify-content: center;
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
     }
     margin-bottom: 3rem;
 }
@@ -115,27 +138,29 @@
         justify-content: center;
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
     }
     .listArtikel{
         .atas{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            column-gap: 1%;
+            column-gap: 2%;
             .artikel{
                 .img__artikel1{
                     background-image: url('../../assets/image/MEBOartikel1.png');
                     width: 100%;
-                    height: 20vw;
-                    background-size: 100% 20vw;
+                    height: 21vw;
+                    background-size: cover;
                     background-repeat: no-repeat;
+                    margin-bottom: 0.5rem;
                 }
                 .img__artikel2{
                     background-image: url('../../assets/image/MEBOartikel2.png');
                     width: 100%;
-                    height: 20vw;
-                    background-size: 100% 20vw;
+                    height: 21vw;
+                    background-size: cover;
                     background-repeat: no-repeat;
+                    margin-bottom: 0.5rem;
                 }
                 .link{
                     text-decoration: none;
@@ -150,39 +175,44 @@
                 }
                 .first{
                     font-size: 0.7rem;
+                    margin-bottom: 0.1rem;
                 }
                 .second{
                     font-size: 1.3rem;
                     font-weight: 600;
+                    margin-bottom: 0.6rem;
                 }
             }
-            margin-bottom: 1rem;
+            margin-bottom: 2%;
         }
         .bawah{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 1%;
+            column-gap: 2%;
             .artikel{
                 .img__artikel3{
                     background-image: url('../../assets/image/MEBOartikel3.png');
                     width: 100%;
-                    height: 20vw;
-                    background-size: 100% 20vw;
+                    height: 21vw;
+                    background-size: cover;
                     background-repeat: no-repeat;
+                    margin-bottom: 0.5rem;
                 }
                 .img__artikel4{
                     background-image: url('../../assets/image/MEBOartikel4.png');
                     width: 100%;
-                    height: 20vw;
-                    background-size: 100% 20vw;
+                    height: 21vw;
+                    background-size: cover;
                     background-repeat: no-repeat;
+                    margin-bottom: 0.5rem;
                 }
                 .img__artikel5{
                     background-image: url('../../assets/image/MEBOartikel5.png');
                     width: 100%;
-                    height: 20vw;
-                    background-size: 100% 20vw;
+                    height: 21vw;
+                    background-size: cover;
                     background-repeat: no-repeat;
+                    margin-bottom: 0.5rem;
                 }
                 .link{
                     text-decoration: none;
@@ -197,10 +227,12 @@
                 }
                 .first{
                     font-size: 0.7rem;
+                    margin-bottom: 0.1rem;
                 }
                 .second{
                     font-size: 1.3rem;
                     font-weight: 600;
+                    margin-bottom: 0.6rem;
                 }
             }
         }
@@ -217,7 +249,7 @@
         justify-content: center;
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
     }
     margin-bottom: 3rem;
 }
@@ -278,13 +310,13 @@
         justify-content: center;
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
     }
     .promo__img{
         background-image: url('../../assets/image/MEBOpromo1desk.png');
         width: 100%;
-        height: 40vw;
-        background-size: 100% 40vw;
+        height: 30vw;
+        background-size: 100% 30vw;
         background-repeat: no-repeat;
     }
     .promom__img{
@@ -303,7 +335,7 @@
         justify-content: center;
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
     }
     display: flex;
     flex-direction: column;
@@ -317,7 +349,7 @@
         justify-content: center;
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: 3rem;
     }
     .listKategori{
         display: grid;
@@ -399,6 +431,15 @@
     display: none;
 }
 
+@media only screen and (max-width: 925px) {
+    .imgcontainer{
+        background-image: url('../../assets/image/kasurtopmobile.png');
+        width: 100%;
+        height: 80vw;
+        background-size: cover;
+    }
+}
+
 @media only screen and (max-width: 810px) {
     .carousel__container.mobile{
         display: block;
@@ -422,44 +463,45 @@
                     .img__artikel1{
                         width: 100%;
                         height: 40vw;
-                        background-size: 100% 40vw;
-                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-repeat: no-r1peat;
                     }
                     .img__artikel2{
                         width: 100%;
                         height: 40vw;
-                        background-size: 100% 40vw;
-                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-repeat: no-r1peat;
                     }
                 }
                 grid-template-columns: 1fr;
-                row-gap: 1%;
-                
+                row-gap: 3%;
+                margin-bottom: 7%;
             }
             .bawah{
                 .artikel{
                     .img__artikel3{
                         width: 100%;
                         height: 40vw;
-                        background-size: 100% 40vw;
-                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-repeat: no-r1peat;
                     }
                     .img__artikel4{
                         width: 100%;
                         height: 40vw;
-                        background-size: 100% 40vw;
-                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-repeat: no-r1peat;
                     }
                     .img__artikel5{
                         width: 100%;
                         height: 40vw;
-                        background-size: 100% 40vw;
-                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-repeat: no-r1peat;
                     }
                     
                 }
                 grid-template-columns: 1fr;
-                row-gap: 1%;
+                row-gap: 3%;
+                margin-bottom: 7%;
             }
         }
     }

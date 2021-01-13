@@ -8,7 +8,7 @@ export default function Template({data}) {
     return(
         <Layout>
             <div className="cookie__crumble">
-                <span><Link to="/" className="cookie__link">Home</Link> / <Link to="/products" className="cookie__link">Products</Link></span>
+                <span><Link to="/" className="cookie__link">Home</Link> / <Link to="/products" className="cookie__link">Produk</Link></span>
             </div>
             <div className="products__container">
                 <div className="sidenav">

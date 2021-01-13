@@ -75,7 +75,7 @@ export default function Template({data}) {
                         visibleSlides={4}
                         >
                             <div className="sliderContainer">
-                                <ButtonBack className="Button back"><img src="/image/left.svg" alt=""/></ButtonBack>
+                                <ButtonBack className="Button back"><div className="left__img img"/></ButtonBack>
                                 <Slider className="slide__img">
                                     {rekomendlist.map(({node: rekomend}) => (
                                         <Slide>
@@ -83,7 +83,7 @@ export default function Template({data}) {
                                         </Slide>
                                     ))}
                                 </Slider>
-                                <ButtonNext className="Button next"><img src="/image/right.svg" alt=""/></ButtonNext>
+                                <ButtonNext className="Button next"><div className="right__img img" /></ButtonNext>
                             </div>  
                         </CarouselProvider>
                     </div>
@@ -95,7 +95,7 @@ export default function Template({data}) {
                         visibleSlides={2}
                         >
                             <div className="sliderContainer">
-                                <ButtonBack className="Button back"><img src="/image/left.svg" alt=""/></ButtonBack>
+                                <ButtonBack className="Button back"><div className="left__img img"/></ButtonBack>
                                 <Slider className="slide__img">
                                     {rekomendlist.map(({node: rekomend}) => (
                                         <Slide>
@@ -103,7 +103,7 @@ export default function Template({data}) {
                                         </Slide>
                                     ))}
                                 </Slider>
-                                <ButtonNext className="Button next"><img src="/image/right.svg" alt=""/></ButtonNext>
+                                <ButtonNext className="Button next"><div className="right__img img" /></ButtonNext>
                             </div>  
                         </CarouselProvider>
                     </div>
@@ -115,7 +115,7 @@ export default function Template({data}) {
                         visibleSlides={3}
                         >
                             <div className="sliderContainer">
-                                <ButtonBack className="Button back"><img src="/image/left.svg" alt=""/></ButtonBack>
+                                <ButtonBack className="Button back"><div className="left__img img"/></ButtonBack>
                                 <Slider className="slide__img">
                                     {rekomendlist.map(({node: rekomend}) => (
                                         <Slide>
@@ -123,7 +123,7 @@ export default function Template({data}) {
                                         </Slide>
                                     ))}
                                 </Slider>
-                                <ButtonNext className="Button next"><img src="/image/right.svg" alt=""/></ButtonNext>
+                                <ButtonNext className="Button next"><div className="right__img img" /></ButtonNext>
                             </div>  
                         </CarouselProvider>
                     </div>

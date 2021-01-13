@@ -34,7 +34,7 @@ export default () => (
                     ))}
                 </ul>
                 <div className="rightside">
-                    <form action="barang">
+                    <form action="/searchlist/barang">
                         <div className="barang__form">
                             <input type="text" name="item" id="" placeholder="search for something"/>
                             <button type="submit"><IoIcons.IoIosSearch /></button>

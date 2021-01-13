@@ -19,6 +19,7 @@
         left: 0;
         bottom: 0;
         right: 0;
+        display: none;
         .title{
             font-weight: 600;
         }
@@ -32,10 +33,10 @@
     }
 }
 
-.contain.c1{background-image: url('../../assets/image/keuntunganmebo1.png');}
-.contain.c2{background-image: url('../../assets/image/keuntunganmebo2.png');}
-.contain.c3{background-image: url('../../assets/image/keuntunganmebo3.png');}
-.contain.c4{background-image: url('../../assets/image/keuntunganmebo4.png');}
+.contain.c1{background-image: url('../../assets/image/MEBObenefit1.png');}
+.contain.c2{background-image: url('../../assets/image/MEBObenefit2.png');}
+.contain.c3{background-image: url('../../assets/image/MEBObenefit3.png');}
+.contain.c4{background-image: url('../../assets/image/MEBObenefit4.png');}
 
 @media only screen and (max-width: 1275px){
     .contain{
@@ -56,6 +57,8 @@
             }
         }
     }
+
+    
 }
 
 @media only screen and (max-width: 780px) {
@@ -67,7 +70,10 @@
         }
         
     }
-    
+    .contain.c1{background-image: url('../../assets/image/MEBObenefit600.1.png');}
+    .contain.c2{background-image: url('../../assets/image/MEBObenefit600.2.png');}
+    .contain.c3{background-image: url('../../assets/image/MEBObenefit600.3.png');}
+    .contain.c4{background-image: url('../../assets/image/MEBObenefit600.4.png');}
 }
 
 @media only screen and (max-width: 700px) {

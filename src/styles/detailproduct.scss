@@ -115,6 +115,9 @@
             margin-bottom: 2rem;
             font-size: 1.3rem;
         }
+        .carousel__container.mobiledes{
+            display: none;
+        }
         .carousel__container{
             .sliderContainer{
                 display: grid;
@@ -127,8 +130,16 @@
                     align-items: center;
                     justify-content: center;
                     z-index: 1;
-                    img{
+                    .img{
                         width: 3vw;
+                        height: 2rem;
+                        background-size: 3vw 2rem;
+                    }
+                    .left__img{
+                        background-image: url('../../assets/image/left.svg');
+                    }
+                    .right__img{
+                        background-image: url('../../assets/image/right.svg');
                     }
                 }
             }

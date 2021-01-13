@@ -37,6 +37,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
   },
   "devDependencies": {
+    "gatsby-plugin-remove-trailing-slashes": "^2.8.0",
     "prettier": "^1.17.0"
   }
 }

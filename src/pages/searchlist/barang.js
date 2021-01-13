@@ -19,7 +19,7 @@ const barang = ({search}) => {
                 node {
                     id
                     name
-                    price
+                    pricetext
                     shortdescription
                     description
                     genre{

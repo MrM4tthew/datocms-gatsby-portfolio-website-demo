@@ -3,6 +3,8 @@ import '../styles/header.scss'
 import { graphql, Link, StaticQuery } from 'gatsby'
 import * as CgIcons from "react-icons/cg"
 import * as IoIcons from "react-icons/io";
+import * as AiIcons from "react-icons/ai";
+import * as HiIcons from "react-icons/hi";
 
 export default () => (
     <StaticQuery 
@@ -36,11 +38,11 @@ export default () => (
                 <div className="rightside">
                     <form action="/searchlist/barang">
                         <div className="barang__form">
-                            <input type="text" name="item" id="" placeholder="search for something"/>
+                            <input type="text" name="item" id="" placeholder="Cari produk..."/>
                             <button type="submit"><IoIcons.IoIosSearch /></button>
                         </div>
                     </form>
-                    <Link to="/whatsapp" className="snipcart-checkout"><CgIcons.CgShoppingCart /></Link>
+                    <Link to="/whatsapp" className="snipcart-checkout"><HiIcons.HiOutlineShoppingCart /></Link>
                 </div>
             </div>
                 

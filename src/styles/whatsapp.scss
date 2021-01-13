@@ -6,6 +6,8 @@
     justify-content: center;
     padding: 6rem;
     padding-bottom: 5rem;
+    min-height: 23rem;
+    max-height: 100%;
     .wa__title{
         font-weight: 600;
         font-size: 4rem;
@@ -23,7 +25,7 @@
         margin-bottom: 1.3rem;
     }
     a{
-        padding: 0.3rem 1rem;
+        padding: 0.5rem 1rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -31,14 +33,33 @@
         border: 0.1rem solid lightgray;
         background-color: transparent;
         color: black;
+        border-radius: 0.3rem;
         text-decoration: none;
         transition: 150ms;
         svg{
             margin-right: 0.3rem;
         }
+        span{
+            font-size: 0.8rem;
+        }
     }
     a:hover{
         background-color: black;
         color: white;
+    }
+}
+
+
+
+@media only screen and (max-width: 1120px){
+    .wa__container{
+        padding-top: 14rem;
+        padding-bottom: 18rem;
+        .sub__par{
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 1.3rem;
+            text-align: center;
+        }
     }
 }

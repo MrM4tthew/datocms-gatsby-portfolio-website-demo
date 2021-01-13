@@ -1,70 +1,110 @@
-.footer{
+.footer__container{
+    color: #636363;
+    display: flex;
+    flex-direction: column;
     background-color: var(--secondary-color);
-    display: grid;
-    grid-template-columns: 58% 40%;
-    column-gap: 2%;
-    padding: 2rem 5rem;
-    .left{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        img{
-            width: 8rem;
-            margin-bottom: 1rem;
+    .footer{
+        
+        display: grid;
+        grid-template-columns: 50% 20% 30%;
+        column-gap: 2%;
+        padding: 2rem 5rem;
+        
+        .left{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-right: 5.5rem;
+            .mebo__logo{
+                background-image: url('../../assets/image/blacklogo.svg');
+                width: 8rem;
+                height: 1.5rem;
+                background-size: 8rem 1.5rem;
+                background-repeat: no-repeat;
+                margin-bottom: 1.1rem;
+                margin-top: 0.4rem;
+            }
+            p{
+                font-size: 0.8rem;
+            }
         }
-        .mebo__logo{
-            background-image: url('../../assets/image/blacklogo.svg');
-            width: 8rem;
-            height: 1.5rem;
-            background-size: 8rem 1.5rem;
-            background-repeat: no-repeat;
-            margin-bottom: 0.5rem;
+        .middle{
+            display: flex;
+            flex-direction: column;
+            .title{
+                font-weight: 600;
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                color: black;
+            }
+            .blog__artikel{
+                list-style: none;
+                margin: 0;
+                font-size: 0.8rem;
+                display: flex;
+                flex-direction: column;
+                a{
+                    
+                    text-decoration: none;
+                    color: #636363;
+                    margin-bottom: 0.3rem;
+                    transition: 150ms;
+                }
+                a:hover{
+                    color: black;
+                }
+            }
         }
-        p{
-            font-size: 0.8rem;
+        .right{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .kontak{
+                font-weight: 600;
+                font-size: 1.2rem;
+                margin-bottom: 0.9rem;
+                color: black;
+            }
+            .mebo{
+                // margin-bottom: 0.5rem;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+            .kontakimg{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                align-items: flex-end;
+                .wa__logo{
+                    background-image: url('../../assets/image/walogo1.svg');
+                    width: 4.5rem;
+                    height: 1.5rem;
+                    background-size: 4rem 1.5rem;
+                    background-repeat: no-repeat;
+                }
+                .shopee__logo{
+                    background-image: url('../../assets/image/shopeelogo1.svg');
+                    width: 5rem;
+                    height: 1.5rem;
+                    background-size: 4rem 1.5rem;
+                    background-repeat: no-repeat;
+                }
+            }
+            img{
+                width: 5rem;
+                margin-right: 50%;
+            }
         }
     }
-    .right{
+    .bawah{
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        .kontak{
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        .mebo{
-            margin-bottom: 0.5rem;
-        }
-        p{
-            font-size: 0.8rem;
-        }
-        .kontakimg{
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            align-items: flex-end;
-            .wa__logo{
-                background-image: url('../../assets/image/walogo1.svg');
-                width: 4.5rem;
-                height: 1.5rem;
-                background-size: 4rem 1.5rem;
-                background-repeat: no-repeat;
-            }
-            .shopee__logo{
-                background-image: url('../../assets/image/shopeelogo1.svg');
-                width: 5rem;
-                height: 1.5rem;
-                background-size: 4rem 1.5rem;
-                background-repeat: no-repeat;
-            }
-        }
-        img{
-            width: 5rem;
-            margin-right: 50%;
-        }
+        justify-content: center;
+        padding: 1rem 0rem;
+        font-size: 0.8rem;
     }
 }
+
 
 @media only screen and (max-width: 1120px) {
     .footer{
@@ -73,5 +113,25 @@
         grid-template-rows: 0.6fr 1fr;
         row-gap: 3rem;
         height: 100%;
+    }
+
+    .footer__container{
+        color: #636363;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+        .footer{
+            padding: 2rem 1rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: 35% 25% 25%;
+            row-gap: 1.5rem;
+            height: 100%;
+        }
+        .bawah{
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0rem;
+            font-size: 0.8rem;
+        }
     }
 }

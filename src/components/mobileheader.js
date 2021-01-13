@@ -3,6 +3,7 @@ import '../styles/mobileheader.scss'
 import {Link} from 'gatsby'
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
+import * as HiIcons from "react-icons/hi";
 
 export default () => {
     const [sidebar, setSidebar] = useState(false);
@@ -24,14 +25,16 @@ export default () => {
                     <div className="searchIcon">
                         <FaIcons.FaSearch onClick={showSearch}/>
                     </div>
+                    <div className="cartIcon">
+                        <Link to="/whatsapp">
+                            <HiIcons.HiOutlineShoppingCart />
+                        </Link>
+                    </div>
                     <div className="burgerIcon">
                         <FaIcons.FaBars onClick={showSidebar}/>
                     </div>
                     
-                    {/* <form className="form" action="products">
-                        <input type="text" name="search" id=""/>
-                        <button type="submit"></button>
-                    </form> */}
+                    
                 </div>
             </div>   
             <nav className={sidebar ? 'navMenu active' : 'navMenu'}>
@@ -41,10 +44,10 @@ export default () => {
                 </div>
                 <ul className="navitems">
                     <Link to="/products"><li className="navcontent">Produk</li></Link>
-                    <Link to="/products/DatoCmsGenre-14776902-en" onClick={showSidebar}><li className="navcontent">Aksesoris</li></Link>
+                    <Link to="/products/DatoCmsGenre-14776902-en" onClick={showSidebar}><li className="navcontent">Bantal guling</li></Link>
                     <Link to="/products/DatoCmsGenre-14776899-en" onClick={showSidebar}><li className="navcontent">Kasur busa</li></Link>
                     <Link to="/products/DatoCmsGenre-14776900-en" onClick={showSidebar}><li className="navcontent">Kasur lipat</li></Link>
-                    <Link to="/products/DatoCmsGenre-14776901-en" style={{borderBottom: "0.1rem solid black"}} onClick={showSidebar}><li className="navcontent">Sofa bed</li></Link>
+                    <Link to="/products/DatoCmsGenre-14776901-en" style={{borderBottom: "0.1rem solid #6e6e6e"}} onClick={showSidebar}><li className="navcontent">Sofa bed</li></Link>
                 </ul>
             </nav>
             <nav className={search ? 'navSearch active' : 'navSearch'}>

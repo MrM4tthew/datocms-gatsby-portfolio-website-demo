@@ -16,7 +16,7 @@ export default () => (
             node {
                 id
                 name
-                price
+                pricetext
                 shortdescription
                 description
                 descriptionukuran

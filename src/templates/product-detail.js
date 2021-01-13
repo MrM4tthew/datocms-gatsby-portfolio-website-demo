@@ -18,7 +18,7 @@ export default function Template({data}) {
     const shortdescription = productInfo.shortdescription
     const ukuran = productInfo.descriptionukuran
     const description = productInfo.description
-    const price = productInfo.price
+    const price = productInfo.pricetext
     const shipping = productInfo.shipping.keterangan
     const image = productInfo.image.sizes
     const imageurl = productInfo.image.url
@@ -36,19 +36,19 @@ export default function Template({data}) {
                     </div>
                     <div className="topcontent__container">
                         <span className="topcontent t1">{name}</span>
-                        <span className="topcontent t5">Rp. {price}</span>
                         <span className="topcontent t2">{shortdescription}, {ukuran}</span>
                         <div className="topcontent t3">
                             <div className="red__circle"></div>
                             <span className="quality">Japan quality</span>
                         </div>
+                        <span className="topcontent t5">Rp{price}</span>
                         <Link to="/whatsapp"
                         class="add-item"
                         >
                         <CgIcons.CgShoppingCart />
                         Tambah ke keranjang
                         </Link>
-                        <p style={{fontSize: '0.8rem', marginBottom: '1rem'}} className="extranotes">**Maaf, untuk sementara fitur checkout sedang dalam proses pengembangan, anda tetap sapat memesan melalui whatsapp</p>
+                        <p style={{fontSize: '0.8rem', marginBottom: '1rem', color: '#636363'}} className="extranotes">*Maaf, untuk sementara fitur checkout sedang dalam proses pengembangan, anda tetap dapat memesan melalui whatsapp</p>
                         <a className="whatsapp__btn" href="https://wa.me/message/DADPPU4RS55DK1">
                             <FaIcons.FaWhatsapp />
                             <span>Whatsapp</span>
@@ -141,11 +141,10 @@ export const pageQuery = graphql`
           node {
             id
             name
-            price
+            pricetext
             description
             shortdescription
             descriptionukuran
-            shopeelink
             shipping {
                 keterangan
                 tipeshipping

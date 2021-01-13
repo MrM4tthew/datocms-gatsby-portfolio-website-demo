@@ -27,9 +27,12 @@
     margin-right: auto;
 }
 
-.sidenav > .navbar1 > a > img {
+.sidenav > .navbar1 > a > .mebo__logo {
+    background-image: url('../../assets/image/blacklogo.svg');
     width: 8rem;
-    object-fit: contain;
+    height: 2rem;
+    background-size: 8rem 2rem;
+    background-repeat: none;
 }
 
 .sidenav > .navbar1 > .burgerIcon{

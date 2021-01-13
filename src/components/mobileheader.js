@@ -19,7 +19,7 @@ export default () => {
                 </div>
                 <div className="navbar1">
                     <Link to="/">
-                        <img src="/image/blacklogo.svg" alt=""/>
+                        <div className="mebo__logo"/>
                     </Link>
                     <div className="searchIcon">
                         <FaIcons.FaSearch onClick={showSearch}/>

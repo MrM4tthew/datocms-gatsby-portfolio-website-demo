@@ -5,6 +5,7 @@ import { graphql, Link } from 'gatsby'
 import "../styles/items.scss"
 
 export default function Template({data}) {
+    console.warn(data)
     return(
         <Layout>
             <div className="cookie__crumble">
@@ -41,6 +42,7 @@ export default function Template({data}) {
                                     <span className="list__title">{product.name}</span>
                                     <span className="list__desc">{product.shortdescription}</span>
                                     <span className="list__desc">{product.descriptionukuran}</span>
+                                    <span className="list__price">Rp{product.pricetext}</span>
                                 </div>
                             </div>
                         </Link>
@@ -55,11 +57,12 @@ export default function Template({data}) {
 
 export const pageQuery = graphql`
   query ProductQuery($category: String!) {
-      rekomend: allDatoCmsProduct(filter: {genre: {id: {eq: $category}}}) {
+      rekomend: allDatoCmsProduct(filter: {genre: {id: {eq: $category}}}, limit: 100) {
         edges {
           node {
             id
             name
+            pricetext
             shortdescription
             descriptionukuran
             image {

@@ -7,6 +7,7 @@ import { Markup } from 'interweave'
 import "../styles/detailproduct.scss"
 import * as CgIcons from "react-icons/cg";
 import * as FaIcons from "react-icons/fa";
+import * as HiIcons from "react-icons/hi";
 import {CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel"
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -22,6 +23,8 @@ export default function Template({data}) {
     const shipping = productInfo.shipping.keterangan
     const image = productInfo.image.sizes
     const imageurl = productInfo.image.url
+
+    console.warn(data)
 
     const rekomendlist = data.rekomend.edges;
     return(
@@ -45,7 +48,7 @@ export default function Template({data}) {
                         <Link to="/whatsapp"
                         class="add-item"
                         >
-                        <CgIcons.CgShoppingCart />
+                        <HiIcons.HiOutlineShoppingCart/>
                         Tambah ke keranjang
                         </Link>
                         <p style={{fontSize: '0.8rem', marginBottom: '1rem', color: '#636363'}} className="extranotes">*Maaf, untuk sementara fitur checkout sedang dalam proses pengembangan, anda tetap dapat memesan melalui whatsapp</p>
@@ -162,7 +165,7 @@ export const pageQuery = graphql`
           }
         }
       }
-      rekomend: allDatoCmsProduct(filter: {genre: {id: {eq: $category}}}) {
+      rekomend: allDatoCmsProduct(filter: {genre: {id: {eq: $category}}}, limit: 6) {
         edges {
           node {
             id

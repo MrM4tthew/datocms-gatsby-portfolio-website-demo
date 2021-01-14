@@ -142,12 +142,22 @@ export default function Home({data}) {
                     <span className="mainTitle">Pelayanan</span>
                     <div className="listPelayanan">
                         <div className="pelayanan p1">
-                            <div className="desktopImg" />
-                            <div className="mobileImg" />
+                            <a href="https://wa.me/message/DADPPU4RS55DK1">
+                                <div className="desktopImg" />
+                            </a>
+                            <a href="https://wa.me/message/DADPPU4RS55DK1">
+                                <div className="mobileImg" />
+                            </a>
+                            
                         </div>
                         <div className="pelayanan p2">
-                            <div className="desktopImg" />
-                            <div className="mobileImg" />
+                            <a href="https://wa.me/message/DADPPU4RS55DK1">
+                                <div className="desktopImg" />
+                            </a>
+                            <a href="https://wa.me/message/DADPPU4RS55DK1">
+                                <div className="mobileImg" />
+                            </a>
+                            
                         </div>
                     </div>      
                 </div>

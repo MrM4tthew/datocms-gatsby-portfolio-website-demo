@@ -11,7 +11,7 @@ export default () => (
     <StaticQuery 
         query={graphql`
         query CatalogueQuery {
-        products: allDatoCmsProduct {
+        products: allDatoCmsProduct(limit: 100) {
             edges {
             node {
                 id
@@ -45,6 +45,7 @@ export default () => (
     `}
     render={data => (
         <Layout>
+            {console.warn(data)}
             <div className="cookie__crumble">
                 <span><Link to="/" className="cookie__link">Home</Link> / Produk</span>
             </div>
@@ -63,7 +64,7 @@ export default () => (
                 </div>
                 <div className="content">
                     
-                <div className="item__count">
+                    <div className="item__count">
                         <span>{data.products.edges.length} barang</span>
                     </div>
                     <span className="list__info">Semua barang</span>
@@ -78,6 +79,7 @@ export default () => (
                                     <span className="list__title">{product.name}</span>
                                     <span className="list__desc">{product.shortdescription}</span>
                                     <span className="list__desc">{product.descriptionukuran}</span>
+                                    <span className="list__price">Rp{product.pricetext}</span>
                                 </div>
                             </div>
                         </Link>
@@ -86,6 +88,7 @@ export default () => (
                 </div>
                 
             </div>
+            {/* <div className="products__spacing"></div> */}
         </Layout>
     )}
     />

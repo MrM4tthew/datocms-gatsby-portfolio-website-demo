@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600&display=swap');
 
 * {
     margin: 0;
@@ -41,7 +36,19 @@
 
 @media only screen and (max-width: 1120px){
     .cookie__crumble{
-        top: 5.8rem;
+        top: 6.6rem;
         padding-left: 1rem;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    :root {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 340px){
+    :root {
+        font-size: 12px;
     }
 }

@@ -21,7 +21,7 @@ function Footer() {
                 <div className="right">
                     <span className="kontak">Kontak</span>
                     <span className="mebo">MEBO</span>
-                    <p>Jl. Bintaro Sektor 9<br/>Tangerang Selatan, Banten<br/>
+                    <p style={{lineHeight: 1.6}}>Jl. Bintaro Sektor 9<br/>Tangerang Selatan, Banten<br/>
                     WhatsApp: +6287819973671
                     </p>
                 </div>

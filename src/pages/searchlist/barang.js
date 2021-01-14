@@ -14,7 +14,7 @@ const barang = ({search}) => {
         <StaticQuery 
             query={graphql`
             query SearchQuery {
-            products: allDatoCmsProduct {
+            products: allDatoCmsProduct(limit: 5000) {
                 edges {
                 node {
                     id

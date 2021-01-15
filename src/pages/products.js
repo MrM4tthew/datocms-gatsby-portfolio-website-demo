@@ -4,8 +4,6 @@ import {graphql, StaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
 import "../styles/items.scss"
 import {Link} from 'gatsby'
-import withLocation from '../components/withLocation'
-import { CgSmileNone } from 'react-icons/cg'
 
 export default () => (
     <StaticQuery 

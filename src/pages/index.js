@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import Keuntungan from "../components/Keuntungan"
-import Belanja from "../components/Belanja"
 import Product from "../components/Product"
 import { Link, graphql } from "gatsby"
+import Img from 'gatsby-image'
 import "../styles/home.scss"
 import {CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel"
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -66,7 +66,7 @@ export default function Home({data}) {
                     <div className="carousel__container mobilesmall">
                         <CarouselProvider
                         naturalSlideWidth={100}
-                        naturalSlideHeight={150}
+                        naturalSlideHeight={180}
                         totalSlides={products.length}
                         visibleSlides={2}
                         >
@@ -168,7 +168,7 @@ export default function Home({data}) {
                                 categories.map( ({node: category}) => (
                                     <div className="kategori__card">
                                         <Link to={`/products/${category.id}`}>
-                                            <img src={category.image.url} alt=""/>
+                                            <img src={category.image.url} alt=""/><Img sizes={category.image.sizes} />
                                             <span>{category.name}</span>
                                         </Link>
                                         

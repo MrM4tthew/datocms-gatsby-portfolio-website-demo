@@ -15,5 +15,11 @@ module.exports = {
         apiToken: "f710b41e097ddbfc7d6c73079c39b7",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
+      }
+    },
   ],
 }

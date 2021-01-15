@@ -2,6 +2,8 @@ import '../styles/product.scss'
 import React from "react"
 import { Markup } from 'interweave'
 import {Link} from 'gatsby'
+import Img from 'gatsby-image'
+
 const Product = (props) => {
 
     const { product } = props;
@@ -10,7 +12,7 @@ const Product = (props) => {
         <div className="product__Container">
             <Link className="link" to={`/product/${product.id}-${product.genre.id}`}>
                 <div className="img__container">
-                    <img className="image" src={product.image.url} alt=""/>
+                    <Img className="image" sizes={product.image.sizes} />
                 </div>
                 <span className="title">{product.name}</span>
                 <Markup content={product.shortdescription}/>

@@ -4,6 +4,7 @@ import Keuntungan from "../components/Keuntungan"
 import Product from "../components/Product"
 import { Link, graphql } from "gatsby"
 import Img from 'gatsby-image'
+import Helmet from 'react-helmet'
 import "../styles/home.scss"
 import {CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel"
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -12,19 +13,36 @@ export default function Home({data}) {
 
     const categories = data.categories.edges
     const products = data.rekomend.edges
+    const description = data.site.siteMetadata.description
+    const keywords = data.site.siteMetadata.keywords
+    const title = data.site.siteMetadata.title
+    const url = data.site.siteMetadata.url
+
+    console.warn(data)
     return (
         <Layout>
-        <div className="imgcontainer">
-            {/* <div className="imgContent">
-                <h2>Diskon Hingga <br/><span style={{fontSize: "6rem"}}>50%</span></h2>
-                <p>Belanja di MEBO melalui <br/>
-                shopee, dapatkan berbagai <br/>
-                promo menarik
-                </p>
-                <a>Telusuri >></a>
-            </div> */}
-        </div>
-        <div className="homeContent">
+            <Helmet>
+                <meta name="description" content={description} />
+                <meta name="keywords" content={keywords} />
+                <meta property="og:title" content={title} />
+                <meta property="og:type" content="website" />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content="" />
+                <meta property="og:locale" content="" />
+                <meta property="og:url" content={url} />
+                <link rel="canonical" href={url}/>
+            </Helmet>
+            <div className="imgcontainer">
+                {/* <div className="imgContent">
+                    <h2>Diskon Hingga <br/><span style={{fontSize: "6rem"}}>50%</span></h2>
+                    <p>Belanja di MEBO melalui <br/>
+                    shopee, dapatkan berbagai <br/>
+                    promo menarik
+                    </p>
+                    <a>Telusuri >></a>
+                </div> */}
+            </div>
+            <div className="homeContent">
                 <div className="item__carousel">
                     <span className="mainTitle">Produk Terlaris</span>
                     <div className="carousel__container desktop">
@@ -167,7 +185,7 @@ export default function Home({data}) {
                         {categories.length ? (
                                 categories.map( ({node: category}) => (
                                     <div className="kategori__card">
-                                        <Link to={`/products/${category.id}`}>
+                                        <Link to={`/products/${category.genreseo}`}>
                                             <img src={category.image.url} alt=""/><Img sizes={category.image.sizes} />
                                             <span>{category.name}</span>
                                         </Link>
@@ -197,6 +215,7 @@ export const pageQuery = graphql`
             name
             shortdescription
             descriptionukuran
+            productseo
             image {
                 url
                 sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
@@ -206,6 +225,7 @@ export const pageQuery = graphql`
             genre {
                 id
                 name
+                genreseo
               }
           }
         }
@@ -215,6 +235,7 @@ export const pageQuery = graphql`
             node {
                 id
                 name
+                genreseo
                 image {
                     url
                     sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
@@ -223,6 +244,14 @@ export const pageQuery = graphql`
                 }
             }
           }
+      }
+      site {
+        siteMetadata {
+          description
+          keywords
+          title
+          url
+        }
       }
   }
 `

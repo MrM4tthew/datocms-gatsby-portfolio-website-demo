@@ -11,9 +11,9 @@ exports.createPages = ({actions, graphql}) => {
         allDatoCmsProduct {
             edges {
               node {
-                id
+                productseo
                 genre {
-                    id
+                    genreseo
                   }
               }
             }
@@ -26,11 +26,11 @@ exports.createPages = ({actions, graphql}) => {
 
         res.data.allDatoCmsProduct.edges.forEach(({node}) => {
             createPage({
-                path: `/product/${node.id}-${node.genre.id}/`,
+                path: `/product/${node.productseo}-${node.genre.genreseo}/`,
                 component: detailTemplate,
                 context: {
-                    id: node.id,
-                    category: node.genre.id
+                    id: node.productseo,
+                    category: node.genre.genreseo
                 }
             })
         })
@@ -42,7 +42,7 @@ exports.createPages = ({actions, graphql}) => {
             edges {
               node {
                 genre {
-                    id
+                    genreseo
                   }
               }
             }
@@ -54,10 +54,10 @@ exports.createPages = ({actions, graphql}) => {
 
         res.data.allDatoCmsProduct.edges.forEach(({node}) => {
             createPage({
-                path: `/products/${node.genre.id}`,
+                path: `/products/${node.genre.genreseo}`,
                 component: productsTemplate,
                 context: {
-                    category: node.genre.id
+                    category: node.genre.genreseo
                 }
             })
         })

@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Product from "../components/Product"
 import { graphql, Link } from 'gatsby'
 import { Markup } from 'interweave'
+import Helmet from 'react-helmet'
 import "../styles/detailproduct.scss"
 import * as CgIcons from "react-icons/cg";
 import * as FaIcons from "react-icons/fa";
@@ -24,11 +25,25 @@ export default function Template({data}) {
     const image = productInfo.image.sizes
     const imageurl = productInfo.image.url
 
-    console.warn(data)
-
     const rekomendlist = data.rekomend.edges;
+    const descriptionmeta = data.site.siteMetadata.description
+    const keywordsmeta = data.site.siteMetadata.keywords
+    const titlemeta = data.site.siteMetadata.title
+    const urlmeta = data.site.siteMetadata.url
     return(
         <Layout>
+            <Helmet>
+                <meta name="description" content={descriptionmeta} />
+                <meta name="keywords" content={keywordsmeta} />
+                <meta property="og:title" content={`${titlemeta} - ${name}`} />
+                <meta property="og:type" content="website" />
+                <meta property="og:description" content={descriptionmeta} />
+                <meta property="og:image" content="" />
+                <meta property="og:locale" content="" />
+                <meta property="og:url" content={`${urlmeta}/${productInfo.productseo}-${productInfo.genre.genreseo}`} />
+                <link rel="canonical" href={`${urlmeta}/${productInfo.productseo}-${productInfo.genre.genreseo}`}/>
+                <title>{`${titlemeta} - ${name}`}</title>
+            </Helmet>
             <div className="cookie__crumble">
                 <span><Link to="/" className="cookie__link">Home</Link> / <Link to="/products" className="cookie__link">Produk</Link> / {name}</span>
             </div>
@@ -139,7 +154,7 @@ export default function Template({data}) {
 
 export const pageQuery = graphql`
   query ProductsQuery($id: String!, $category: String!) {
-    products: allDatoCmsProduct(filter: {id: {eq: $id}}) {
+    products: allDatoCmsProduct(filter: {productseo: {eq: $id}}) {
         edges {
           node {
             id
@@ -148,6 +163,7 @@ export const pageQuery = graphql`
             description
             shortdescription
             descriptionukuran
+            productseo
             shipping {
                 keterangan
                 tipeshipping
@@ -161,17 +177,19 @@ export const pageQuery = graphql`
             genre {
               id
               name
+              genreseo
             }
           }
         }
       }
-      rekomend: allDatoCmsProduct(filter: {genre: {id: {eq: $category}}}, limit: 6) {
+      rekomend: allDatoCmsProduct(filter: {genre: {genreseo: {eq: $category}}}, limit: 6) {
         edges {
           node {
             id
             name
             shortdescription
             descriptionukuran
+            productseo
             image {
                 url
                 sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
@@ -181,8 +199,17 @@ export const pageQuery = graphql`
             genre {
                 id
                 name
+                genreseo
               }
           }
+        }
+      }
+      site {
+        siteMetadata {
+          description
+          keywords
+          title
+          url
         }
       }
   }

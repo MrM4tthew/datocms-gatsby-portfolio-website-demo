@@ -43,10 +43,10 @@ export default () => {
                 </div>
                 <ul className="navitems">
                     <Link to="/products"><li className="navcontent">Produk</li></Link>
-                    <Link to="/products/DatoCmsGenre-14776902-en" onClick={showSidebar}><li className="navcontent">Aksesoris</li></Link>
-                    <Link to="/products/DatoCmsGenre-14776899-en" onClick={showSidebar}><li className="navcontent">Kasur busa</li></Link>
-                    <Link to="/products/DatoCmsGenre-14776900-en" onClick={showSidebar}><li className="navcontent">Kasur lipat</li></Link>
-                    <Link to="/products/DatoCmsGenre-14776901-en" style={{borderBottom: "0.1rem solid black"}} onClick={showSidebar}><li className="navcontent">Sofa bed</li></Link>
+                    <Link to="/products/aksesoris" onClick={showSidebar}><li className="navcontent">Aksesoris</li></Link>
+                    <Link to="/products/kasur-busa" onClick={showSidebar}><li className="navcontent">Kasur busa</li></Link>
+                    <Link to="/products/kasur-lipat" onClick={showSidebar}><li className="navcontent">Kasur lipat</li></Link>
+                    <Link to="/products/sofa-bed" style={{borderBottom: "0.1rem solid black"}} onClick={showSidebar}><li className="navcontent">Sofa bed</li></Link>
                 </ul>
             </nav>
             <nav className={search ? 'navSearch active' : 'navSearch'}>

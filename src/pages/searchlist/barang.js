@@ -22,8 +22,10 @@ const barang = ({search}) => {
                     pricetext
                     shortdescription
                     description
+                    productseo
                     genre{
                         id
+                        genreseo
                     }
                     image {
                     url
@@ -39,6 +41,7 @@ const barang = ({search}) => {
                     node {
                         id
                         name
+                        genreseo
                     }
                   }
               }
@@ -56,7 +59,7 @@ const barang = ({search}) => {
                         <div className="kategori__list">
                             <ul>
                                 {data.categories.edges.map(({node: category})=> (
-                                   <Link className="link" to={`/products/${category.id}`}>
+                                   <Link className="link" to={`/products/${category.genreseo}`}>
                                     <li key={category.id}>{category.name}</li> 
                                    </Link>
                                 ))}
@@ -71,7 +74,7 @@ const barang = ({search}) => {
                         <span className="list__info">{data.products.edges.filter(({node: produk}) => produk.name.toLowerCase().includes(item)).length == 0 ?  "Hasil pencarian tidak ditemukan" : `Hasil pencarian "${item}"` }</span>
                         <div className="items">  
                         {data.products.edges.filter(({node: product}) => product.name.toLowerCase().includes(item)).map(({node: product}) => (
-                            <Link className="link" to={`/product/${product.id}-${product.genre.id}/`}>
+                            <Link className="link" to={`/product/${product.productseo}-${product.genre.genreseo}/`}>
                                 <div className="list__container">
                                     <div className="list__image">
                                         <Img sizes={product.image.sizes} />
@@ -79,6 +82,8 @@ const barang = ({search}) => {
                                     <div className="list__content">
                                         <span className="list__title">{product.name}</span>
                                         <span className="list__desc">{product.shortdescription}</span>
+                                        <span className="list__desc">{product.descriptionukuran}</span>
+                                        <span className="list__price">Rp{product.pricetext}</span>
                                     </div>
                                 </div>
                             </Link>

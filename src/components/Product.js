@@ -10,7 +10,7 @@ const Product = (props) => {
 
     return(
         <div className="product__Container">
-            <Link className="link" to={`/product/${product.id}-${product.genre.id}`}>
+            <Link className="link" to={`/product/${product.productseo}-${product.genre.genreseo}`}>
                 <div className="img__container">
                     <Img className="image" sizes={product.image.sizes} />
                 </div>

@@ -4,6 +4,7 @@ import {graphql, StaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
 import "../styles/items.scss"
 import {Link} from 'gatsby'
+import Helmet from 'react-helmet'
 
 export default () => (
     <StaticQuery 
@@ -18,8 +19,10 @@ export default () => (
                 shortdescription
                 description
                 descriptionukuran
+                productseo
                 genre{
                     id
+                    genreseo
                 }
                 image {
                 url
@@ -35,15 +38,35 @@ export default () => (
                 node {
                     id
                     name
+                    genreseo
                 }
-              }
+            }
+        }
+        site {
+            siteMetadata {
+              description
+              keywords
+              title
+              url
+            }
           }
         
         }
     `}
     render={data => (
         <Layout>
-            {console.warn(data)}
+            <Helmet>
+                <meta name="description" content={data.site.siteMetadata.description} />
+                <meta name="keywords" content={data.site.siteMetadata.keywords} />
+                <meta property="og:title" content={`${data.site.siteMetadata.title} - produk`} />
+                <meta property="og:type" content="website" />
+                <meta property="og:description" content={data.site.siteMetadata.description} />
+                <meta property="og:image" content="" />
+                <meta property="og:locale" content="" />
+                <meta property="og:url" content={`${data.site.siteMetadata.url}/products`} />
+                <link rel="canonical" href={`${data.site.siteMetadata.url}/products`}/>
+                <title>{`${data.site.siteMetadata.title} - produk`}</title>
+            </Helmet>
             <div className="cookie__crumble">
                 <span><Link to="/" className="cookie__link">Home</Link> / Produk</span>
             </div>
@@ -53,7 +76,7 @@ export default () => (
                     <div className="kategori__list">
                         <ul>
                             {data.categories.edges.map(({node: category})=> (
-                               <Link className="link" to={`/products/${category.id}`}>
+                               <Link className="link" to={`/products/${category.genreseo}`}>
                                 <li key={category.id}>{category.name}</li> 
                                </Link>
                             ))}
@@ -68,7 +91,7 @@ export default () => (
                     <span className="list__info">Semua barang</span>
                     <div className="items">  
                     {data.products.edges.map(({node: product}) => (
-                        <Link className="link" to={`/product/${product.id}-${product.genre.id}/`}>
+                        <Link className="link" to={`/product/${product.productseo}-${product.genre.genreseo}/`}>
                             <div className="list__container">
                                 <div className="list__image">
                                     <Img sizes={product.image.sizes} />

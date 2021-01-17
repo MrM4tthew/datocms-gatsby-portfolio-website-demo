@@ -33,14 +33,6 @@ export default function Home({data}) {
                 <link rel="canonical" href={url}/>
             </Helmet>
             <div className="imgcontainer">
-                {/* <div className="imgContent">
-                    <h2>Diskon Hingga <br/><span style={{fontSize: "6rem"}}>50%</span></h2>
-                    <p>Belanja di MEBO melalui <br/>
-                    shopee, dapatkan berbagai <br/>
-                    promo menarik
-                    </p>
-                    <a>Telusuri >></a>
-                </div> */}
             </div>
             <div className="homeContent">
                 <div className="item__carousel">
@@ -103,10 +95,7 @@ export default function Home({data}) {
                         <span>Lihat produk lainnya</span>
                     </Link>
                 </div>
-                <div className="keuntunganContainer">
-                    <span className="mainTitle">Keuntungan belanja di MEBO</span>
-                    <Keuntungan />
-                </div>
+                
                 <div className="artikelContainer">
                     <span className="mainTitle">Artikel & Berita</span>
                     <div className="listArtikel">
@@ -186,7 +175,7 @@ export default function Home({data}) {
                                 categories.map( ({node: category}) => (
                                     <div className="kategori__card">
                                         <Link to={`/products/${category.genreseo}`}>
-                                            <img src={category.image.url} alt=""/><Img sizes={category.image.sizes} />
+                                            <img src={category.image.url} alt=""/>
                                             <span>{category.name}</span>
                                         </Link>
                                         
@@ -195,10 +184,14 @@ export default function Home({data}) {
                         ) : ''}
                     </div>                
                 </div>
-                <div className="promoContainer">
+                {/* <div className="promoContainer">
                     <span className="mainTitle">Promo</span>
                     <div className="promo__img desktopImg" style={{width: '100%'}} />
                     <div className="promom__img mobileImg" />
+                </div> */}
+                <div className="keuntunganContainer">
+                    <span className="mainTitle">Kelebihan MEBO</span>
+                    <Keuntungan />
                 </div>
             </div>
         </Layout>

@@ -27,5 +27,13 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
       }
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        showSpinner: false,
+        trickle: false,
+        minimum: 0.4,
+      },
+    },
   ],
 }

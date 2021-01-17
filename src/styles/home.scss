@@ -1,5 +1,5 @@
 .imgcontainer{
-    background-image: url('../../assets/image/MEBOtop1desktop.png');
+    background-image: url('../../assets/image/anii5-3s3n9.webp');
     width: 100%;
     height: 31vw;
     background-size: 100% 31vw;
@@ -149,7 +149,7 @@
             column-gap: 2%;
             .artikel{
                 .img__artikel1{
-                    background-image: url('../../assets/image/MEBOartikel1.png');
+                    background-image: url('../../assets/image/absam-n7eei.webp');
                     width: 100%;
                     height: 21vw;
                     background-size: cover;
@@ -157,7 +157,7 @@
                     margin-bottom: 0.5rem;
                 }
                 .img__artikel2{
-                    background-image: url('../../assets/image/MEBOartikel2.png');
+                    background-image: url('../../assets/image/aqwa3-tkxnq.webp');
                     width: 100%;
                     height: 21vw;
                     background-size: cover;
@@ -193,7 +193,7 @@
             column-gap: 2%;
             .artikel{
                 .img__artikel3{
-                    background-image: url('../../assets/image/MEBOartikel3.png');
+                    background-image: url('../../assets/image/aexkp-basbw.webp');
                     width: 100%;
                     height: 21vw;
                     background-size: cover;
@@ -201,7 +201,7 @@
                     margin-bottom: 0.5rem;
                 }
                 .img__artikel4{
-                    background-image: url('../../assets/image/MEBOartikel4.png');
+                    background-image: url('../../assets/image/ak6qy-sslka.webp');
                     width: 100%;
                     height: 21vw;
                     background-size: cover;
@@ -209,7 +209,7 @@
                     margin-bottom: 0.5rem;
                 }
                 .img__artikel5{
-                    background-image: url('../../assets/image/MEBOartikel5.png');
+                    background-image: url('../../assets/image/av32w-rvau0.webp');
                     width: 100%;
                     height: 21vw;
                     background-size: cover;
@@ -265,16 +265,16 @@
             a{
                 cursor: pointer;
                 .desktopImg{
-                    background-image: url('../../assets/image/MEBOpelayanan1desk.png');
+                    background-image: url('../../assets/image/a3g79-e87kk.webp');
                     width: 100%;
                     height: 25vw;
                     background-size: 100% 25vw;
                 }
                 .mobileImg{
-                    background-image: url('../../assets/image/MEBOpelayanan1mob.png');
+                    background-image: url('../../assets/image/atsdm-qrw3p.webp');
                     width: 100%;
-                    height: 35vw;
-                    background-size: 100% 35vw;
+                    height: 45vw;
+                    background-size: 100% 45vw;
                 }
             }
             
@@ -283,16 +283,16 @@
             a{
                 cursor: pointer;
                 .desktopImg{
-                    background-image: url('../../assets/image/MEBOpelayanan2desk.png');
+                    background-image: url('../../assets/image/ah5a8-wtydi.webp');
                     width: 100%;
                     height: 25vw;
                     background-size: 100% 25vw;
                 }
                 .mobileImg{
-                    background-image: url('../../assets/image/MEBOpelayanan2mob.png');
+                    background-image: url('../../assets/image/aqq3q-nhpbc.webp');
                     width: 100%;
-                    height: 35vw;
-                    background-size: 100% 35vw;
+                    height: 45vw;
+                    background-size: 100% 45vw;
                 }
             }
             
@@ -304,53 +304,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items: center;
     column-gap: 1vw;
-}
-
-
-
-
-
-
-
-// Promo
-
-.promoContainer{
-    display: flex;
-    flex-direction: column;
-    .mainTitle{
-        display: flex;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-    }
-    .promo__img{
-        background-image: url('../../assets/image/MEBOpromo1desk.png');
-        width: 100%;
-        height: 23.5vw;
-        background-size: 100% 23.5vw;
-        background-repeat: no-repeat;
-    }
-    .promom__img{
-        background-image: url('../../assets/image/MEBOpromo1mob.png');
-        width: 100%;
-        height: 40vw;
-        background-size: 100% 40vw;
-        background-repeat: no-repeat;
-    }
-    margin-bottom: 3rem;
-}
-
-.shopContainer{
-    .mainTitle{
-        display: flex;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 3rem;
-    }
-    display: flex;
-    flex-direction: column;
 }
 
 // kategori
@@ -450,7 +403,7 @@
 
 @media only screen and (max-width: 925px) {
     .imgcontainer{
-        background-image: url('../../assets/image/MEBOtop1mobile1.png');
+        background-image: url('../../assets/image/abln5-rjibx.webp');
         width: 100%;
         height: 68vw;
         background-size: 100% 68vw;
@@ -541,7 +494,6 @@
         }
     }
     .imgcontainer{
-        background-image: url('../../assets/image/MEBOtop1mobile1.png');
         width: 100%;
         height: 68vw;
         background-size: 100% 68vw;

@@ -1,7 +1,6 @@
 .kContainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 1rem;
 }
 
 .contain{
@@ -10,73 +9,33 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    padding-top: 100%;
+    padding-top: 30vw;
     position: relative;
-    .text__container{
-        padding: 5%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        display: none;
-        .title{
-            font-weight: 600;
-        }
-        .spacing{
-            height: 70%;
-            width: 100%;
-        }
-        .content{
-            font-size: 0.9rem;
-        }
-    }
 }
 
-.contain.c1{background-image: url('../../assets/image/MEBObenefit1.png');}
-.contain.c2{background-image: url('../../assets/image/MEBObenefit2.png');}
-.contain.c3{background-image: url('../../assets/image/MEBObenefit3.png');}
-.contain.c4{background-image: url('../../assets/image/MEBObenefit4.png');}
+
+.contain.c1{background-image: url('../../assets/image/ab5dy-ygpvf.webp');}
+.contain.c2{background-image: url('../../assets/image/af5vl-u4fir.webp');}
+.contain.c3{background-image: url('../../assets/image/a9en2-ci948.webp');}
+.contain.c4{background-image: url('../../assets/image/ax629-74lnj.webp');}
 
 @media only screen and (max-width: 1275px){
-    .contain{
-        .text__container{
-            .spacing{
-                height: 60%;
-            }
-        }
-    }
 }
 
 @media only screen and (max-width: 910px) {
-    .contain{
-        .text__container{
-            .spacing{
-                height: 54%;
-                width: 100%;
-            }
-        }
-    }
-
-    
 }
 
 @media only screen and (max-width: 780px) {
+    .contain.c1{background-image: url('../../assets/image/as4ps-noxs9.webp');}
+    .contain.c2{background-image: url('../../assets/image/a8vg2-90j1k.webp');}
+    .contain.c3{background-image: url('../../assets/image/ap6d8-kxs94.webp');}
+    .contain.c4{background-image: url('../../assets/image/axya8-jpjm6.webp');}
     .contain{
-        .text__container{
-            .spacing{
-                height: 40%;
-            }
-        }
-        
+        padding-top: 32vw;
     }
-    .contain.c1{background-image: url('../../assets/image/MEBObenefit600.1.png');}
-    .contain.c2{background-image: url('../../assets/image/MEBObenefit600.2.png');}
-    .contain.c3{background-image: url('../../assets/image/MEBObenefit600.3.png');}
-    .contain.c4{background-image: url('../../assets/image/MEBObenefit600.4.png');}
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
     .kContainer{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -84,19 +43,7 @@
         column-gap: 1rem;
     }
     .contain{
-        font-size: 1.5rem;
-        .text__container{
-            .spacing{
-                height: 40%;
-            }
-            .title{
-                font-size: 0.9em;
-            }
-
-            .content{
-                font-size: 0.8em;
-            }
-        }
+        padding-top: 60vw;
     }
 }
 
